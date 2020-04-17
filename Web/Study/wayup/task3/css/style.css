@@ -1,0 +1,28 @@
+h1 {
+    color: red;
+}
+
+.blue__block {
+    width: 100px;
+    background-color: blue;
+    color: white;
+}
+
+.red__text {
+    color: red;
+}
+
+.h2_header1 {
+    background-color: green;
+    color: white;
+}
+
+.h2_header2 {
+    background-color: green;
+    color: white;
+    padding: 10px 0 10px 40px;   
+}
+
+.list {
+    border-style: solid 1px black;
+}
