@@ -22,7 +22,7 @@ h1, h2, h3, h4, h5, h6 {
 .container {
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto /* сверху 0 и выравниваем по центру */
+    margin: 0 auto; /* сверху 0 и выравниваем по центру */
 }
 
 /* стили для Intro */
@@ -33,6 +33,10 @@ h1, h2, h3, h4, h5, h6 {
     background: url("../images/intro.jpg") center no-repeat;
     /* Чтобы занимало всю площадь экрана */
     -webkit-background-size: cover;
+}
+
+.intro__title {
+
 }
 
 /* Header */
