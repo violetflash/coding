@@ -1,0 +1,11 @@
+.obj {
+    background-color: tomato;
+    border: 2px solid black;
+    height: 50px;
+    color: white;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    text-align: center;
+    line-height: 16px;
+}
+
