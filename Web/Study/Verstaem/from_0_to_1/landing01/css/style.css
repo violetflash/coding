@@ -60,7 +60,6 @@ header {
     position: absolute;
     left: 21px;
     color: #1b1b1b;
-
 }
 
 /*Если один элемент куда-то отправляем через float, то обязательно нужно делать вот такое решение для родительского
@@ -104,8 +103,6 @@ header {
     color: #ffc222;
 }
 
-
-
 .header__content {
     padding: 34px 0 23px;
 }
@@ -143,3 +140,69 @@ header {
     display: none;
 }
 
+.slider {
+    background-image: url("../img/slider-fon-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 500px;
+}
+
+.slider__item-content {
+    padding-top: 110px;
+    text-align: center;
+    max-width: 665px;
+    margin: 0 auto;
+}
+
+.slider__title {
+    text-transform: uppercase;
+    color: #fff;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: 1.5px;
+    margin-bottom: 22px;
+}
+
+.slider__text {
+    font-size: 18px;
+    line-height: 24px;
+    color: #d3d2d2;
+    margin-bottom: 50px;
+}
+
+.default__btn {
+    display: inline-block;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #fff;
+    line-height: 24px;
+    padding: 8px 30px 8px 24px;
+    border: 1px solid #ffc222;
+    border-right-width: 20px;
+    position: relative;
+}
+
+.default__btn:after {
+    content: "\f105";
+    font-family: 'icomoon';
+    color: #fff;
+    position: absolute;
+    right: -12px;
+    /* чтобы стрелка центрировалась всегда вертикально, независимо от кол-во строк текста в кнопке */
+    /* опускаем сначала на 50%*/
+    top:50%;
+    /* потом поднимаем на 50%, в итоге элемент встает по центрируется по высоте */
+    transform: translateY(-50%);
+}
+
+.highlighted {
+    color: #ffc222;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-align: center;
+}
