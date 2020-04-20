@@ -19,7 +19,6 @@
 }
 
 .item__1 {
-    right: 0;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -31,6 +30,7 @@
 }
 
 .item__3 {
+    right: 0;
     top: 50%;
     transform: translateY(-50%);
 }
