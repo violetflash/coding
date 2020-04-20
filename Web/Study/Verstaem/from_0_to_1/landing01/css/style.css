@@ -184,6 +184,7 @@ header {
     border: 1px solid #ffc222;
     border-right-width: 20px;
     position: relative;
+    z-index: 2;
 }
 
 .default__btn:after {
@@ -191,7 +192,7 @@ header {
     font-family: 'icomoon';
     color: #fff;
     position: absolute;
-    right: -12px;
+    right: -13px;
     /* чтобы стрелка центрировалась всегда вертикально, независимо от кол-во строк текста в кнопке */
     /* опускаем сначала на 50%*/
     top:50%;
@@ -205,4 +206,54 @@ header {
     font-size: 18px;
     letter-spacing: 2px;
     text-align: center;
+}
+
+/* будем позиционировать слайдер относительно этого блока */
+.slider__inner {
+    position: relative;
+}
+
+.slick-btn {
+    position: absolute;
+    top: 70%;
+    /* кнопка была спрятана под другим блоком - надо выдвинуть ее на передний план */
+    z-index: 3;
+    /* делаем фоны кнопок */
+    width: 40px;
+    height: 40px;
+    border: 1px solid #fff;
+    background-color: ;
+    /* делаем руку в виде указателя */
+    cursor: pointer;
+    /* убираем синее обрамление кнопок слайдера */
+    outline: none;
+}
+
+.slick-btn.slick-disabled {
+    background-color: #ffc222;
+}
+
+.slick-btn:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'icomoon';
+    color: #fff;
+}
+
+.slick-next {
+    right: 0;
+}
+
+.slick-next:before {
+    content: "\f105";
+}
+
+.slick-prev {
+    left: 0;
+}
+
+.slick-prev:before {
+    content: "\f104";
 }
