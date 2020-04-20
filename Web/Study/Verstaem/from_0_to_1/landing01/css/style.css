@@ -124,6 +124,7 @@ header {
     /* резервируем место для рамки, чтобы потом кнопка не сдвигалась на ширину рамки */
     border: 1px solid transparent;
     padding: 0 16px;
+
     transition: all 0.3s;
 }
 
@@ -258,4 +259,27 @@ header {
 
 .slick-prev:before {
     content: "\f104";
+}
+
+.about {
+    padding: 50px 0 30px;
+}
+
+.about__top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about__title-box {
+    /*резервируем место для полоски и текста справа */
+    max-width: 520px;
+    padding-left: 140px;
+
+}
+
+.about__btn {
+    padding: 10px 40px;
+    border: 1px solid #e6e6e6;
+    font-family: Roboto, sans-serif;
+    color: #373636
 }
