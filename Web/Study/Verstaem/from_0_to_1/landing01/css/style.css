@@ -143,6 +143,7 @@ header {
 
 .slider {
     background-image: url("../img/slider-fon-1.jpg");
+    /* стандартный набор для background image */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -263,14 +264,14 @@ header {
     margin-bottom: 60px;
 }
 
-.services__title-box {
+.title-box {
     /*резервируем место для полоски и текста справа */
     max-width: 520px;
     padding-left: 140px;
     position: relative;
 }
 
-.services__title-box:before {
+.title-box:before {
     content: "";
     position: absolute;
     width: 100px;
@@ -280,7 +281,7 @@ header {
     top: 11%;
 }
 
-.services__title {
+.title-box-title {
     font-family: Roboto, sans-serif;
     font-size: 24px;
     line-height: 24px;
@@ -289,7 +290,7 @@ header {
     margin-bottom: 10px;
 }
 
-.services__text {
+.title-box-text {
     letter-spacing: 0.1px;
 }
 
@@ -299,7 +300,21 @@ header {
     padding: 10px 40px;
     border: 3px solid #e6e6e6;
     font-family: Roboto, sans-serif;
-    color: #373636
+    color: #373636;
+    /* плавный выход из под наведения на кнопку */
+    transition: all 0.7s;
+}
+
+.services__btn a:hover {
+    background-color: #ffc222;
+    border-radius: 10px;
+    transition: all, 1s;
+
+}
+
+/* Эффект при кликании */
+.services__btn:active {
+    transform: scale(1.05);
 }
 
 .services__items {
@@ -369,3 +384,41 @@ header {
     right: 0;
 }
 
+.about {
+    background-image: url("../img/about-fon.jpg");
+    /* стандартный набор для background image */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 300px;
+    padding: 30px 0 45px;
+}
+
+.about__title {
+    font-family: Roboto, sans-serif;
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+
+.about__text {
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    padding-bottom: 38px;
+    color: #d3d2d2;
+}
+
+.about__title-inner {
+    max-width: 570px;
+    padding-left: 15px;
+}
+
+.about__btn.default__btn:after {
+    color: #000;
+}
+
+.form__content {
+    padding: 40px 0;
+}
