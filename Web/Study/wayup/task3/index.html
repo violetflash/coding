@@ -1,5 +1,18 @@
+<!--В самом конце этого занятия Андрей рассказывает про деление тега body на секции. Нужно выделить смысловые секции и
+разбить body на теги section. Например в первую секцию (в данном макете первая секция – это тег header)  будут включены
+картинка, заголовок h1, один или два текстовых параграфа и тоже самое с оставшимися секциями. Я понимаю, что это
+примитивный макет, но даже в нем можно увидеть закономерность – заголовок + контент.
+Давайте  сделаем полную разметку с использованием тегов header, section, footer
+В header мы помещаем не только логотип, но и главный заголовок, и параграфы его поясняющие. Header – главная секция
+сайта. Даже браузер для заголовка h1 в header дает размер 2em, а в section и footer 1.5em
+Форма и список объединены по смыслу одним заголовком "Что я буду уметь?" (верстать формы и списки). Как следствие,
+они должны находится в одной секции.
+- Инпуты и кнопку мы оборачиваем не в див, а в тег form,т.е. в форму
+- Для всех ссылок ведущих на внешние ресурсы, нужно прописывать атрибут target="_blank", чтобы ссылка открывалась в
+новом окне.-->
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
@@ -7,40 +20,43 @@
     <title>Document</title>
 </head>
 <body>
-
-    <header>
-        <img src="img/logo.jpg" alt="wayup_logo" width="9%">
+    <header class="header">
+        <img src="img/logo.jpg" alt="wayup_logo">
         <h1>Вступление H1</h1>
+        <div class="blue__block">
+            <p>Это текст моего второго домашнего задания.
+        </div>
+        <br><br><br><br>
+        <p>Не верится, но мне уже удается писать свой <span class="red__text">первый код на HTML.</span>
     </header>
-    <div class="blue__block">
-        <p>Это текст моего второго домашнего задания.</p>
-    </div>
-    <p>Не верится, но мне уже удается писать свой <span class="red__text">первый код на HTML.</span></p>
-    <div class="h2_header1">   
+    <section class="what__next">
         <h2>Что дальше? H2</h2>
-    </div>
-    <p>Дальше я буду получать все больше и больше опыта в разработке сайтов, чтобы достичь новых вершин!
-        <a href="">Прочитать больше в Google</a>
-    </p>
-    <div class="h2_header2">
-        <h2>Что я буду уметь? H2</h2>
-    </div>
-    <p style="padding-left: 100px">Я смогу создавать вот такие замечательные формы:</p>
-    <div>
-        <input type="text" placeholder="Имя">
-        <input type="text" placeholder="E-mail">
-        <input type="text" placeholder="Телефон">
-        <button type="submit">Отправить форму</button>
-    </div>
-    <p>А также я научусь создавать списки:</p>
-    <ul class="list1">
-        <li><div class='list2'>С одним пунктом</div></li>
-        <li><div class='list2'>С несколькими пунктами</div></li>
-        <li><div class='list2'>И даже с тремя отдельными пунктами</div></li>
-    </ul>
-    <div class="h2_header1">  
+        <p>Дальше я буду получать все больше и больше опыта в разработке сайтов, чтобы достичь новых вершин!
+            <a href="#" target="_blank">Прочитать больше в Google</a>
+    </section>
+    <section class="skills">
+        <div class="h2">
+            <h2>Что я буду уметь? H2</h2>
+        </div>
+        <div class="form">
+            <p>Я смогу создавать вот такие замечательные формы:
+            <form>
+                <input type="text" placeholder="Имя">
+                <input type="text" placeholder="E-mail">
+                <input type="text" placeholder="Телефон">
+                <button type="submit">Отправить форму</button>
+            </form>
+        </div>
+        <p>А также я научусь создавать списки:</p>
+        <ul>
+            <li>С одним пунктом</li>
+            <li>С несколькими пунктами</li>
+            <li>И даже с тремя отдельными пунктами</li>
+        </ul>
         <h2>Отличное начало! H2</h2>
-    </div>  
-    <p><a href="">Перейти на страницу первого занятия курса</a></p>
+    </section>
+    <footer class="footer">
+    <p><a href="#" target="_blank">Перейти на страницу первого занятия курса</a></p>
+    </footer>
 </body>
 </html>

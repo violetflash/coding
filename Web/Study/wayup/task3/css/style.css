@@ -2,6 +2,16 @@ h1 {
     color: red;
 }
 
+h2 {
+    background-color: green;
+    color: white;
+    padding-left: 5px;
+}
+
+.header img {
+    width: 145px;
+}
+
 .blue__block {
     width: 100px;
     background-color: blue;
@@ -12,21 +22,22 @@ h1 {
     color: red;
 }
 
-.h2_header1 {
+.h2 {
     background-color: green;
-    color: white;
+    padding: 30px 40px;
 }
 
-.h2_header2 {
-    background-color: green;
-    color: white;
-    padding: 10px 0 10px 40px;   
+.form {
+    display: inline-block;
+    text-align: center;
 }
 
-.list2 {
-    border: 1px solid black;
+ul {
+    padding-top: 10px;
 }
 
-.list1 {
-    padding-left: 35px;
+li {
+    font-size: 30px;
+    border: 1px solid #000;
 }
+

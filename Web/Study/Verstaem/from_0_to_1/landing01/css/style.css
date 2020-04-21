@@ -188,6 +188,13 @@ header {
     position: relative;
     z-index: 2;
     outline: none;
+
+}
+
+/* Эффект при наведении мыши на кнопку */
+.default__btn:hover:after {
+    color: #000;
+    transition: all 1s;
 }
 
 .default__btn:after {
@@ -415,10 +422,79 @@ header {
     padding-left: 15px;
 }
 
-.about__btn.default__btn:after {
-    color: #000;
+.form {
+    padding-top: 30px;
 }
 
-.form__content {
-    padding: 40px 0;
+.form__inner {
+    padding-bottom: 40px;
+    background-image: url("../img/woman.png");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    min-height: 460px;
+}
+
+.form__box {
+    max-width: 850px;
+    padding-top: 45px;
+}
+
+.form__box-inner {
+    display: flex;
+    justify-content: space-between;
+
+}
+.form__box-left {
+    /* растягиваем поля ввода до макс. ширины */
+    max-width: 265px;
+    width: 100%;
+}
+
+.form__box-right {
+    /* растягиваем поля ввода до макс. ширины */
+    max-width: 560px;
+    width: 100%;
+}
+
+.form__box-inner label,
+.form__box-inner input,
+.form__box-inner textarea,
+.form__box-inner select {
+    display: block;
+    width: 100%;
+}
+
+.form__box-right .default__btn {
+    color: #373636;
+    background-color: transparent;
+    letter-spacing: 0.25px;
+}
+
+.form__box-inner label {
+    line-height: 36px;
+    font-family: Roboto, sans-serif;
+    color: #282828;
+}
+
+.form__box-inner input {
+    margin-bottom: 8px;
+    height: 40px;
+    border: 1px solid #e6e6e6;
+    padding: 0 10px;
+}
+
+.form__box-inner select {
+    height: 40px;
+    border: 1px solid #e6e6e6;
+    padding-left: 17px;
+}
+
+.form__box-inner textarea {
+    height: 208px;
+    border: 1px solid #e6e6e6;
+    padding: 10px;
+}
+
+.form__box-right button {
+    bottom: 0;
 }
