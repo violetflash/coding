@@ -232,8 +232,18 @@ header {
 }
 
 .slick-btn.slick-disabled {
+    /*visibility: hidden;*/
     background-color: transparent;
     cursor: default;
+    color: #fff;
+}
+
+.slick-btn:hover:before {
+    color: #000;
+}
+
+.slick-btn.slick-disabled:hover:before {
+    color: #fff;
 }
 
 .slick-btn:before {
@@ -288,7 +298,7 @@ header {
     top: 11%;
 }
 
-.title-box-title {
+.title-box__title {
     font-family: Roboto, sans-serif;
     font-size: 24px;
     line-height: 24px;
@@ -297,7 +307,7 @@ header {
     margin-bottom: 10px;
 }
 
-.title-box-text {
+.title-box__text {
     letter-spacing: 0.1px;
 }
 
@@ -316,7 +326,6 @@ header {
     background-color: #ffc222;
     border-radius: 10px;
     transition: all, 1s;
-
 }
 
 /* Эффект при кликании */
@@ -339,9 +348,9 @@ header {
     position: relative;
     max-height: 375px;
     /* этот круче */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    /*box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);*/
     /*оригинальный */
-    /*box-shadow: 0px 7px 24.3px 2.7px rgba(91, 89, 89, 0.14);*/
+    box-shadow: 0 7px 24.3px 2.7px rgba(91, 89, 89, 0.14);
 }
 
 .services__item-title {
@@ -446,7 +455,6 @@ header {
 .form__box-inner {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 200px;
 
 }
 .form__box-left {
@@ -575,8 +583,9 @@ header {
     background-image: url("../img/advantages-bg.png");
     background-repeat: no-repeat;
     background-size: cover;
-    max-height: 287px;
-    padding: 50px 0 40px ;
+    background-position: center;
+    min-height: 287px;
+    padding: 55px 0 40px ;
 }
 
 .advantages__inner {
@@ -585,20 +594,181 @@ header {
     text-align: center;
 }
 
-.adv__image:before {
+.advantages-item {
+    max-width: 360px;
+    padding: 0 20px;
+}
+
+.advantages__title  {
+    padding: 60px 0 15px;
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    color: #fff;
+    position: relative;
+}
+
+.advantages__title:before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    border: 2px  solid #ffc222;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.advantages__title:after {
     font-family: 'icomoon';
     content: "\f00c";
     color: #fff;
-    padding: 13px;
-    border: 1px  solid #ffc222;
+    font-size: 14px;
+    position: absolute;
+    top: 9px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.adv__title {
-    padding-top: 25px;
-    color: #fff;
+.advantages__text {
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    color: #d3d2d2;
 }
 
-.adv__text {
+.news {
+    padding: 55px 0 110px;
+    background-color: #f9f9f9;
+
+}
+
+.news-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.news__btn {
+    padding-top: 40px;
+}
+
+.news__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.news__slider {
+    max-width: 554px;
+    width: 100%;
+    background-color: #fff;
+    padding: 60px 30px 50px 70px;
+    box-shadow: 0 5px 15.36px 0.64px rgba(128, 127, 127, 0.13);
+    position: relative;
+}
+
+.news__slider:before {
+    content: "\f10e";
+    font-family: 'icomoon';
+    font-size: 16px;
     color: #fff;
-    padding-top: 20px;
+    /* выравнивание текста в блоке через line-height */
+    text-align: center;
+    line-height: 35px;
+    width: 65px;
+    height: 30px;
+    background-color: #ffc222;
+    position: absolute;
+    top: 0;
+    left: 70px;
+}
+
+.news__slider-title {
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    color: #242424;
+    padding-bottom: 15px;
+}
+
+.news__slider-text {
+    letter-spacing: 0.1px;
+    padding-bottom: 15px;
+}
+
+.news__slider-author {
+    font-family: Roboto, sans-serif;
+    color: #212020;
+    font-weight: 500;
+    letter-spacing: 0.1px;
+    padding-left: 5px;
+}
+
+.news__slider-inner .slick-btn {
+    top: auto;
+    bottom: -125px;
+}
+.news__slider-inner .slick-next {
+    right: -32px;
+    left:auto;
+}
+
+.news__slider-inner .slick-prev {
+    right: 25px;
+    left:auto;
+}
+
+.news__slider-inner .slick-disabled {
+    color: #dadada;
+    border-color: #dadada;
+    cursor: default;
+}
+
+.news__slider-inner .slick-disabled:before {
+    color: #dadada;
+}
+
+.news__blog {
+    max-width: 262px;
+    width: 100%;
+    transition: all 0.3s;
+}
+
+.news__blog:hover {
+    transform: scale(1.03);
+    transition: all 0.3s;
+}
+
+.news__images {
+    position: relative;
+}
+
+.news__date {
+    width: 50px;
+    height: 55px;
+    background-color: #ffc222;
+    position: absolute;
+    top: -1px;
+    left: 15px;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 30px;
+}
+
+
+.news__blog-title {
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #242424;
+    line-height: 18px;
+    letter-spacing: 0.5px;
+    padding: 12px 0;
+}
+
+.news__blog-text {
+    letter-spacing: 0.1px;
+    color: #5e5e5e;
 }
