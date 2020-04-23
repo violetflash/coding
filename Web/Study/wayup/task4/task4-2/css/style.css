@@ -1,0 +1,196 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0.2px;
+    line-height: 22px;
+    color: #201b2d;
+}
+
+.header {
+    width: 100%;
+    height: 100%;
+    background-image: -moz-linear-gradient(121deg, rgb(55,143,217) 0%, rgb(78,190,254) 100%);
+    background-image: -webkit-linear-gradient( 121deg, rgb(55,143,217) 0%, rgb(78,190,254) 100%);
+    background-image: -ms-linear-gradient( 121deg, rgb(55,143,217) 0%, rgb(78,190,254) 100%);
+}
+
+
+.container {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.logo {
+    padding-top: 62px;
+}
+
+.header__content {
+    padding: 60px 0 140px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__title {
+    padding: 100px 0 30px;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    line-height: 48px;
+    color: #fff;
+    max-width: 600px;
+}
+
+.stylized-text{
+    font-size: 59px;
+    line-height: 73px;
+}
+
+.header__text {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    line-height: 27px;
+    letter-spacing: 0.2px;
+    max-width: 400px;
+    color: #fff;
+    padding-bottom: 60px;
+}
+
+.learn-more__btn {
+    font-family: Montserrat, sans-serif;
+    font-weight: 900;
+    line-height: 25px;
+    padding: 22px 28px;
+    color: #000;
+    background-color: #ffd429;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+.learn-more__btn:hover {
+    background-color: #ebac0c;
+    transition: all 0.5s;
+}
+
+.about {
+    padding: 110px 0 130px;
+}
+
+.about__content {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.about__title {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0.2px;
+    color: #201b2d;
+    padding-bottom: 71px;
+    text-align: center;
+}
+
+.about__text {
+
+}
+
+/* Резервируем место для картинки в верхн. части блока */
+.about__item {
+    padding-top: 90px;
+    position: relative;
+    max-width: 295px;
+}
+
+.about__item-title {
+    font-size: 19px;
+    line-height: 25px;
+    font-weight: 700;
+    padding-bottom: 16px;
+}
+
+.item-1:before {
+    content: url("../img/time.jpg");
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.item-2:before {
+    content: url("../img/beach.jpg");
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+
+}
+
+.item-3:before {
+    content: url("../img/rocket.jpg");
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.footer__content {
+    background-color: #ecf3f8;
+    padding: 105px 0;
+}
+
+.footer__title {
+    padding-bottom: 55px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__form {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0.2px;
+    line-height: 25px;
+    display: block;
+    width: 345px;
+    height: 50px;
+    color: #9c9b9f;
+    border-radius: 3px;
+    outline: none;
+    border: 1px solid #bbbbbb;
+    padding: 15px 25px;
+    margin-bottom: 15px;
+}
+
+.footer__btn {
+    margin: 0 auto;
+}
+
+.form__btn {
+    display: inline-block;
+    width: 345px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+.footer__copyright {
+    color: #fff;
+    background-color: #164d7a;
+    padding: 63px 0;
+    text-align: center;
+}
+
+
