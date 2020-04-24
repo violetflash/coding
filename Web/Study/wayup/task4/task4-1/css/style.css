@@ -143,4 +143,61 @@ body {
     padding: 35px 0 40px;
 }
 
+/* 993px - 1200px */
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 960px;
+    }
+}
 
+/* 769px - 992px */
+@media screen and (max-width: 992px) {
+    .container {
+        width: 720px;
+    }
+    .header__content {
+        display: flex;
+        flex-direction: column;
+
+    }
+    .logo {
+        padding-top: 40px;
+    }
+    .header__title {
+        padding: 0 0 30px;
+    }
+    .header__img {
+        display: block;
+        width: 549px;
+        margin: 72px auto 0;
+    }
+    .about__content {
+        display: flex;
+        flex-direction: column;
+    }
+    .about__item {
+        width: auto;
+        margin-bottom: 30px;
+    }
+}
+
+
+
+/* 577px - 768px */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 540px;
+    }
+    .header__img {
+        width: 100%;
+
+    }
+
+}
+
+/* 0 - 576px */
+@media screen and (max-width: 576px) {
+    .container {
+        width: 90%;
+    }
+}

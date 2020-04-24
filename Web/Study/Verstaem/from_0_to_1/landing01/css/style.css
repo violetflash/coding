@@ -873,3 +873,23 @@ header {
     color: #fff;
     text-align: center;
 }
+
+#modal {
+    width: 300px;
+}
+
+#modal input {
+    font-family: Roboto, sans-serif;
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    height: 40px;
+    border: 1px solid #e6e6e6;
+    padding: 0 10px;
+    outline: none;
+}
+
+#modal input[type='submit'] {
+    background-color: #ffc222;
+    border: none;
+}
