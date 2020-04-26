@@ -1,0 +1,225 @@
+@media (max-width: 1150px) {
+    .services__items {
+        display: block;
+    }
+    .services__item {
+        max-width: 90%;
+        margin: 0 auto 15px;
+    }
+    .services__top {
+        max-width: 90%;
+        margin: 0 auto 20px;
+    }
+    .form__inner {
+        background-image: none;
+    }
+    .news__inner {
+        display: block;
+    }
+    .news__blog {
+        display: block;
+        max-width: 100%;
+        margin-bottom: 20px;
+        margin-right: 20px;
+    }
+    .news__blog:after {
+        content: "";
+        clear: both;
+        display: block;
+    }
+    .news__images {
+        float: left;
+        margin-right: 20px;
+    }
+    .news__slider-inner .slick-btn {
+        bottom: -95px;
+    }
+    .news__slider {
+        margin-bottom: 90px;
+        max-width: 100%;
+    }
+    .news__btn {
+        padding-top: 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .slider .slick-btn{
+        display: none !important;
+    }
+    .services__top, .news__top {
+        display: block;
+        margin-bottom: 20px;
+        max-width: 100%;
+    }
+    .title-box {
+        margin: 0 auto;
+        padding-left: 60px;
+        max-width: 560px;
+    }
+    .services__btn {
+        text-align: center;
+        margin-top: 20px;
+    }
+    .services__btn a{
+        transition: none;
+        margin-bottom: 20px;
+        width: 520px;
+    }
+    .services__items {
+        flex-direction: column;
+        align-items: center;
+    }
+    .services__item{
+        margin-bottom: 15px;
+    }
+    .form__box-inner {
+        flex-direction: column;
+        align-items: center;
+    }
+    .form__box-left input {
+        width: 100%;
+
+    }
+    .form__box-right button {
+        float: none;
+    }
+    .form__box-left {
+        max-width: 560px;
+    }
+    .form__box-inner .jq-selectbox.jqselect {
+        margin-bottom: 10px;
+    }
+    .title-box:before {
+        width: 50px;
+    }
+    .advantages__inner {
+        flex-direction: column;
+        align-items: center;
+    }
+    .advantages-item {
+        padding-bottom: 25px;
+        text-align: center;
+        max-width: 100%;
+    }
+    .advantages {
+        padding: 25px 0 25px;
+    }
+    .advantages__title {
+        padding: 50px 0 15px;
+    }
+    .news {
+        padding-bottom: 40px;
+
+}
+
+@media (max-width: 700px) {
+    .header__btn {
+        float: none;
+        display: block;
+    }
+    .header__contacts {
+        text-align: center;
+    }
+    .header__btn:before {
+        display: none;
+    }
+    .header__btn-menu {
+        display: block;
+    }
+    .menu ul {
+        margin-top: 20px;
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 50;
+    }
+    .menu li{
+        display: block;
+        text-align: center;
+        border: 1px solid #fff;
+        border-left: none;
+        border-right: none;
+        
+    }
+    .menu li + li {
+        padding-left: 0;
+    }
+    .menu a{
+        display: block;
+        background-color: #ffc222;
+
+    }
+    .header__content-inner{
+        flex-direction: row-reverse;
+    }
+}
+
+@media (max-width: 606px) {
+    .services__btn a{
+        width: 100%;
+    }
+    .services__item {
+        max-width: 100%;
+    }
+
+}
+
+@media (max-width: 550px) {
+    .news__slider {
+        padding: 40px 30px;
+    }
+    .news__slider:before{
+        left: 40px;
+    }
+    .footer__content{
+        display: block;}
+    }
+    .footer__info{
+        margin-bottom: 30px;
+    }
+}
+
+
+
+@media (max-width: 500px) {
+    .news__images {
+        float: none;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 400px) {
+    .slider__title {
+        font-size: 24px;
+    }
+
+    .slider__text {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 400px) {
+    .header__btn:before {
+        display: block;
+    }
+    .header__email {
+        padding-right: 20px;
+        line-height: 30px;
+    }
+    .header__phone {
+        line-height: 30px;
+        padding-top: 10px;
+    }
+}
+
+@media (max-width: 375px) {
+
+}
+
+@media (min-width: 700px) {
+    .menu ul {
+        display: block !important;
+    }
+}

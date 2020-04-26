@@ -646,7 +646,7 @@ header {
 
 }
 
-.news-top {
+.news__top {
     display: flex;
     justify-content: space-between;
     margin-bottom: 50px;
@@ -855,13 +855,15 @@ header {
 
 .footer__map {
     padding-top: 30px;
+    max-width: 630px;
+    width: 100%;
+    padding-left: 20px;
+
 }
 
-/*.footer__map iframe {*/
-/*    max-width: 630px;*/
-/*    height: 250px;*/
-/*    width: 100%;*/
-/*}*/
+.footer__map iframe {
+    width: 100%;
+}
 
 
 .footer__copyright {
