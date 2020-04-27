@@ -13,13 +13,16 @@ body {
     color: #fff;
 
     margin: 0;
+
 }
 
-.header {
+.header-fixed {
     background-color: #007765;
-    position: sticky;
-    width: 100%;
 
+    position: fixed;
+    width: 100%;
+    top:0;
+    z-index: 100;
 }
 
 .container {
@@ -57,12 +60,23 @@ body {
     display: inline;
 }
 
+#the_problem,
+#PiedPiperCoin,
+#the_team {
+    border-top: 84px solid transparent;
+    margin-top: -84px;
+    background-clip: padding-box;
+}
+
 .jumbotron {
     background-image: url(../img/jumbo-bg.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     min-height: 403px;
+
+    padding-top: 84px;
+
 }
 
 .jumbotron__title {
@@ -76,8 +90,12 @@ body {
 
 .problem {
     background-color: #eee;
-    padding: 40px 54px 92px 55px;
+
+    padding: 48px 54px 92px 55px;
 }
+
+
+
 
 .title {
     color: #007765;
@@ -86,12 +104,100 @@ body {
     line-height: 75px;
 
     text-align: center;
+    padding-bottom: 16px;
 }
 
 .subtitle {
     color: #000;
+    font-size: 32px;
+    line-height: 37.5px;
 
     max-width: 1110px;
 
+    margin: 0 auto;
+}
 
+.hero {
+    background-image: url("../img/hero-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    max-height: 483px;
+}
+
+.hero__inner {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 56px;
+    text-align: center;
+
+    padding: 128px 163px 127px;
+}
+
+.ppc {
+    padding: 48px 55px 92px;
+}
+
+.ppc-text {
+    display: flex;
+    padding: 0 71px 40px 55px;
+
+}
+
+.ppc-text img {
+    max-width: 115px;
+    max-height: 115px;
+
+}
+
+.ppc-sub__top {
+    padding-left: 48px;
+}
+
+.team {
+    background-color: #eee;
+
+    padding: 48px 0 64px;
+}
+
+.team-title {
+    padding-bottom: 32px;
+}
+
+.team__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 54px 30px 55px;
+
+}
+
+.employee {
+    text-align: center;
+}
+
+.employee__name {
+    color: #007765;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.employee__job {
+    color: #000;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.footer {
+    background-color: #333;
+    padding: 48px 0 64px;
+}
+
+.copyright {
+    color: #fff;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+
+    padding: 0 339px 0 340px;
 }
