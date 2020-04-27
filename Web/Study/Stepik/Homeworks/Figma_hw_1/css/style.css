@@ -1,0 +1,97 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    color: #fff;
+
+    margin: 0;
+}
+
+.header {
+    background-color: #007765;
+    position: sticky;
+    width: 100%;
+
+}
+
+.container {
+    max-width: 1219px;
+    margin: 0 auto;
+}
+
+.header__top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__logo {
+    padding: 20px 0 19px 55px;
+}
+
+.header__nav {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+
+    padding: 29px 54px 26px 0;
+}
+
+.header__nav a {
+    color: #fff;
+
+    padding: 0 15px 0 8px;
+
+    text-decoration: none;
+}
+
+.header ul, li {
+    list-style: none;
+    display: inline;
+}
+
+.jumbotron {
+    background-image: url(../img/jumbo-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 403px;
+}
+
+.jumbotron__title {
+    font-size: 72px;
+    line-height: 84px;
+    color: #fff;
+
+    text-align: center;
+    padding: 160px 0;
+}
+
+.problem {
+    background-color: #eee;
+    padding: 40px 54px 92px 55px;
+}
+
+.title {
+    color: #007765;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 75px;
+
+    text-align: center;
+}
+
+.subtitle {
+    color: #000;
+
+    max-width: 1110px;
+
+
+}
