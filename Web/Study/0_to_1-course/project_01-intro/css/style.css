@@ -1,0 +1,17 @@
+body {
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 60px;
+}
+
+.photo img {
+    max-height: 500px;
+}
+
+.about {
+    font-size: 24px;
+    font-weight: 700;
+    font-style: italic;
+}
