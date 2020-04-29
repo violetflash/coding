@@ -1,0 +1,54 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 40px;
+}
+
+.text:hover {
+    color: tomato;
+}
+
+.padding-100 {
+    padding-left: 100px;
+}
+
+.padding-200 {
+    padding-left: 200px;
+}
+
+.padding-300 {
+    padding-left: 300px;
+}
+
+.padding-400 {
+    padding-left: 400px;
+}
+
+.padding-500 {
+    padding-left: 500px;
+}
+
+.padding-600 {
+    padding-left: 600px;
+}
+
+.padding-700 {
+    padding-left: 700px;
+}
+
+.padding-800 {
+    padding-left: 800px;
+}
+
+.padding-900 {
+    padding-left: 900px;
+}
+
