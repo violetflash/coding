@@ -32,12 +32,12 @@ body {
 
     background-color: #c1c1c1;
 
-    transition: background-color .5s;
+    transition: all .3s;
 }
 
 .header:hover {
     background-color: #86869c;
-    transition: background-color .5s;
+    color: #000;
 }
 
 .nav {
@@ -47,12 +47,12 @@ body {
 
     background-color: #eb1e63;
 
-    transition: background-color .5s;
+    transition: all .3s;
 }
 
 .nav:hover {
     background-color: #811c2a;
-    transition: background-color .5s;
+    color: #000;
 }
 
 .wrapper {
@@ -68,12 +68,12 @@ body {
 
     background-color: #3a3e47;
 
-    transition: background-color .5s;
+    transition: all .3s;
 }
 
 .aside:hover {
     background-color: #d3b084;
-    transition: background-color .5s;
+    color: #000;
 }
 
 .figure {
@@ -84,28 +84,38 @@ body {
 
     background-color: #637b8b;
 
-    transition: background-color .5s;
+    transition: all .3s;
 }
 
 .figure:hover {
     background-color: #349aa8;
-    transition: background-color .5s;
+    color: #000;
 }
 
 .img {
-    max-width: 280px;
-    width: 100%;
-    padding: 15px 0 260px;
+    display: block;
+    width: 280px;
+    height: 350px;
     margin: 17px auto 0;
+    position: relative;
 
     background-color: #85d32c;
 
-    transition: background-color .5s;
+    transition: all .3s;
 }
 
 .img:hover {
     background-color: #d3d11a;
-    transition: background-color .5s;
+    color: #000;
+}
+
+.img::before {
+    content: "img";
+    position: absolute;
+    top:0;
+    right: 0;
+    left: 0;
+    padding-top: 15px;
 }
 
 .main {
@@ -115,12 +125,12 @@ body {
 
     background-color: #6bb01a;
 
-    transition: background-color .5s;
+    transition: all .3s;
 }
 
 .main:hover {
     background-color: #336618;
-    transition: background-color .5s;
+    color: #000;
 }
 
 .section {
@@ -131,12 +141,12 @@ body {
 
     background-color: #ffc10a;
 
-    transition: background-color .5s;
+    transition: all .3s;
 }
 
 .section:hover {
     background-color: #e2251c;
-    transition: background-color .5s;
+    color: #000;
 }
 
 .btn {
@@ -152,28 +162,28 @@ body {
     color: #fff;
     border: none;
 
-    transition: background-color .5s;
+    transition: all .3s;
 }
 
 .btn:hover {
     background-color: #55d3b0;
-    transition: background-color .5s;
+    color: #000;
 }
 
 .article {
     max-width: 580px;
     width: 100%;
-    margin: 0 auto;
+    margin: 20px auto 0;
     padding: 95px 0;
 
     background-color: #ff800a;
 
-    transition: background-color .5s;
+    transition: all .3s;
 }
 
 .article:hover {
     background-color: #893e08;
-    transition: background-color .5s;
+    color: #000;
 }
 
 .footer {
@@ -182,11 +192,10 @@ body {
 
     background-color: #000;
 
-    transition: background-color .5s;
+    transition: all .3s;
 }
 
 .footer:hover {
     background-color: #fff;
-    transition: background-color .5s;
     color: #000;
 }

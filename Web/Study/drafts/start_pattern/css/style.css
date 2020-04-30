@@ -7,3 +7,27 @@ html {
 *::after {
     box-sizing: inherit;
 }
+
+.box {
+    width: 150px;
+    height: 150px;
+    border: 2px solid olive;
+}
+
+.img {
+    /*margin-top: 100px;*/
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: #ffc222;
+    /*position: relative;*/
+}
+
+.img__text {
+    display: block;
+    position: absolute;
+    top: 0;
+    /*right: 0;*/
+    /*left: 0;*/
+    /*padding-top: 20px;*/
+}
