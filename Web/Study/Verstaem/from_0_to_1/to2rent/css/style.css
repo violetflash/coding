@@ -64,3 +64,18 @@ body {
 .menu__list-item:last-child {
     border-right: 1px solid #c4c4c4;
 }
+
+.slider__item-1 {
+    background-image: url(../images/slide-item-1.jpg);
+    min-height: 600px;
+}
+
+.slider__item-2 {
+    background-image: url(../images/slide-item-2.jpg);
+    min-height: 600px;
+}
+
+.slider__item-3 {
+    background-image: url(../images/slide-item-3.jpg);
+    min-height: 600px;
+}
