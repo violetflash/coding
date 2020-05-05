@@ -1,0 +1,82 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+.wrapper {
+    position: relative;
+}
+
+.grey {
+    top: 250px;
+    width: 700px;
+
+    background-color: #808080;
+}
+
+.pink {
+    top: 200px;
+    z-index: 1;
+
+    width: 600px;
+
+    background-color: #ffc0cb;
+}
+
+.blue {
+    top: 150px;
+    z-index: 2;
+
+    width: 500px;
+
+    background-color: #0000ff;
+}
+
+.green {
+    top: 100px;
+    z-index: 3;
+
+    width: 400px;
+
+    background-color: #008000;
+}
+
+.yellow {
+    top: 50px;
+    z-index: 4;
+
+    width: 300px;
+
+    background-color: #ffff00;
+}
+
+.red {
+    z-index: 5;
+
+    width: 200px;
+
+    background-color: #ff0000;
+}
+
+.properties {
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    margin: 0 auto;
+    height: 100px;
+
+    border: 5px solid #000;
+
+    transition: background-color 2s;
+}
+
+.properties:hover {
+    background-color: magenta;
+}
+

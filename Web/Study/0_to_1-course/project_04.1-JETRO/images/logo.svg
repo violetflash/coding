@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="87" height="34" viewBox="0 0 87 34">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 36px;
+        fill: #e8603c;
+        font-family: Bebas;
+      }
+
+      .cls-2 {
+        fill: #f3af9d;
+      }
+    </style>
+  </defs>
+  <text id="JETRO" class="cls-1" x="-1.001" y="33">JET<tspan class="cls-2">RO</tspan></text>
+</svg>
