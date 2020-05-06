@@ -3,18 +3,38 @@
 }
 
 .wrapper {
-    width: 600px;
-    height: 600px;
-    background-color: #0d95e8;
+    display: flex;
+    justify-content: stretch;
+    background-color: #cccccc;
+}
 
-
+.container {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: tomato;
+    height: 400px;
+    /*box-sizing: content-box;*/
 
 }
 
-.item {
-    width: 200px;
-    height: 200px;
-    border: 5px solid tomato;
+.item1 {
+    background-color: #0d95e8;
+    margin-right: 10px;
+    border-top: 61px solid darkgreen;
+    width: 20%;
+
+    /*box-sizing: content-box;*/
+}
+
+.item2 {
+    background-color: #0d95e8;
+    border-top: 61px solid maroon;
+    margin-left: 10px;
+    width: 20%;
+    /*box-sizing: content-box;*/
+
+
 }
 
 

@@ -184,7 +184,7 @@ li {
     padding: 20px 0 10px;
 }
 
-.slider__item {
+.slider-top__item {
     min-height: 440px;
     background-position: top center;
     background-size: cover;

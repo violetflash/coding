@@ -1,3 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="87" height="34" viewBox="0 0 87 34">
-  <image id="Logo" width="87" height="34" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFcAAAAiCAYAAAAqJ0UeAAAC/ElEQVRoge2aX27iMBDGP1Bf0e4jb+UG5QCRYE9QOEGz4gDLDYATbC8QbfYEZk9QkDgA3IC+5RHkC6wM4xLscZoQLBWSnxS1+M9UfJmO7fE0UIIkDDoAOhdY2Lbj1RblbBxox6uF/l2KKI+tbWs42lqtOZEi6gPop0bvAMw5mw8uk0kYTAFMjOZZO15NU59DZkweZgCmJW1o0g6Sy5YUkfrxj0SJrQEMUkQDAK8AHu1e/JYiWqq/nxa5aQ2rDs8A/kgRzaWIvmd9aykiJapwCKvpAVhLEXVrcU88k0eySBGNAfzi+hi+AVhQeKrFJV4olp5BIk2t0dkogQ+hphb3RGi1AGMSy2QP4C+Ad6vnSE+FB+eCVgJz0cuExp6NT8JAedGbMW/ZjleWd+Vg1hqOPuxTTFSe9WRM7TKmuDa1cA1aw9GO7HELv2JQOc9tDUdrh5eaYoMWKZNYC0u8kidbVDIskMCXzo2Nz0po1l4dcz1Si+uRWlyP1OJ6pJLi6hOUb3zsc/uU9LEosv/1DLcVY7dTZfAhbs+xP8QFR8mrQgmaMT0mC6ulJD7E/WpMpIi4E5TJ3GopSb2gHdnkzesWoRb3GGsHVusV8BEWlj7il0di7ormGvgQd/GFdgV5uCTTlosqhAWVcmyoB8DQ6gWePrvmuZSqxVxXuPLivZUSl9KDG6ujFvdqcN5bi3sluMR27rhbJD5nicudv3dWy+3BeS4K7HXPdCGx2eM+K24SBmNHAQT31m8K2tNyt7ZcaFhaLcBYX8NTds1V87B7wKl0SRM6hN2n67IymCRh8NlZvtANsQfU93gxzHLizhmvVNq8SRG9O3T6mKs9d5J6XBNcb+gW4ZzkkcnzxhmpSJdOiqX6D2kmYZAnQG8qIC5M76WtG5eezGKv43LTUfiQRgnbb8ere1jMDhSJu5Qt+2mN5FHC9nWuIkvcPZV63pWwKTjvtcTFSeAfjheiUeVNnXRNRIOKj7uGyGtKwNyjqKWgcij1EnQ4VV66sDJrAP4DHtXtbyGo3EkAAAAASUVORK5CYII="/>
+<svg id="Logo" xmlns="http://www.w3.org/2000/svg" width="87" height="34" viewBox="0 0 87 34">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 36px;
+        fill: #e8603c;
+        font-family: Bebas;
+      }
+
+      .cls-2 {
+        fill: #f3af9d;
+      }
+    </style>
+  </defs>
+  <text id="JETRO" class="cls-1" x="-1.001" y="33">JET<tspan class="cls-2">RO</tspan></text>
 </svg>
