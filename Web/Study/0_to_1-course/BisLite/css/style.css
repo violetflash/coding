@@ -105,6 +105,7 @@ li {
     border-bottom: 5px solid #2aacc8;
     box-shadow: 0 5px 0 0 rgba(42, 172, 200, 0.004);
     padding: 10px 5px;
+    z-index: 999;
 
 }
 
@@ -180,7 +181,7 @@ li {
 
 .slider {
     background-color: #81e4ed;
-    padding: 20px 0 40px;
+    padding: 20px 0 10px;
 }
 
 .slider__item {
@@ -220,6 +221,27 @@ li {
     padding-top: 90px;
 }
 
+.slick-dots li button {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: rgba(98, 98, 98, .5);
+}
+
+.slick-dots li.slick-active button {
+    background-color: #fff;
+}
+
+
+.slick-dots li button:before {
+    display: none;
+}
+
+.slick-dots li {
+    width: auto;
+    height: auto;
+    margin: 0 9px;
+}
 
 
 
