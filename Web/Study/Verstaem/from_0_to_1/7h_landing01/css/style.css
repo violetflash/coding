@@ -161,7 +161,7 @@ header {
     margin: 0 auto;
 }
 
-.slider__title {
+.slider-top__title {
     text-transform: uppercase;
     color: #fff;
     font-family: Roboto, sans-serif;
@@ -172,7 +172,7 @@ header {
     margin-bottom: 22px;
 }
 
-.slider__text {
+.slider-top__text {
     font-size: 18px;
     line-height: 24px;
     color: #d3d2d2;

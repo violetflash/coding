@@ -117,7 +117,7 @@ body {
     margin: 0 auto;
 }
 
-.hero {
+.slider__text {
     background-image: url("../img/hero-bg.png");
     background-repeat: no-repeat;
     background-size: cover;

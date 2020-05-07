@@ -19,8 +19,6 @@ body {
 }
 
 a {
-    display: inline-block;
-    color: #000;
     text-decoration: none;
 }
 
@@ -28,10 +26,6 @@ ul {
     list-style: none;
     margin: 0;
     padding: 0;
-}
-
-li {
-    display: inline-block;
 }
 
 .header__inner {
@@ -49,6 +43,10 @@ li {
 
 .header__menu {
     padding: 42px 81px 39px 0;
+}
+
+.li-row {
+    display: inline-block;
 }
 
 .menu__link {
@@ -94,7 +92,7 @@ li {
     display: none;
 }
 
-/* Hero section */
+/* Slider section */
 
 .container {
     max-width: 1200px;
@@ -102,23 +100,27 @@ li {
     padding: 0 15px;
 }
 
-.hero {
+.swiper-container {
+    width: 1920px;
+    height: 700px;
+}
+
+.swiper__bg {
     position: relative;
     width: 100%;
-    height: 700px;       /* ? */
-    background: url("../images/hero-bg-image.jpg");
+    min-height: 700px;       /* ? */
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top center;
     background-size: cover;
 }
 
-.hero__text {
+.slider__text-box {
     position: absolute;
     color: #fff;
-    bottom: 119px;
+    bottom: 123px;
 }
 
-.hero__header {
+.slider__heading {
     font-family: 'PT Sans', sans-serif;
     line-height: 18px;
     text-transform: uppercase;
@@ -131,19 +133,55 @@ li {
     font-weight: 700;
 }
 
-.hero__title {
+.slider__title {
     margin: 0;
     max-width: 560px;
     margin-bottom: 10px;
 }
 
-.hero__footer li + li {
+.slider__text-footer li + li {
     margin-left: 10px;
 }
 
-.by {
+.slider__text-footer-date {
+    margin-bottom: 36px;
+}
+
+.slider__text-footer-by {
     color: #b4b4b4;
 }
 
+.slider__text-footer-author {
+    color: #fff;
+    transition: all .3s;
+}
+
+.slider__text-footer-author:hover {
+    color: rgba(255, 255, 255, .9);
+}
+
+.slider__text-stats-link {
+    color: #fff;
+    transition: all .3s;
+}
+
+.slider__text-stats-link:hover {
+    color: rgba(255, 255, 255, .9);
+}
+
+.slider__btn-more {
+    font-family: 'PT Serif', serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #fff;
+    padding: 13px 21px;
+    background-color: rgb(201, 169, 110);
+    transition: all .3s;
+}
+
+.slider__btn-more:hover {
+    background-color: rgba(201, 169, 110, .8);
+}
 
 

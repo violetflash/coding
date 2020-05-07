@@ -1,46 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>FASHION</title>
-    <link href="css/fonts.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>FASHION</title>
+  <link href="css/fonts.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
+  <main>
     <header class="header">
-        <div class="header__inner">
-            <a class="header__logo-link" href="#">
-                <img class="header__logo-img" src="images/logo.svg" alt="fashion logo">
-            </a>
-            <nav class="header__menu">
-                <ul class="menu__list">
-                    <li class="menu__item"><a class="menu__link menu__link--active" href="#">home</a></li>
-                    <li class="menu__item"><a class="menu__link" href="#">recipes</a></li>
-                    <li class="menu__item"><a class="menu__link" href="#">article</a></li>
-                    <li class="menu__item"><a class="menu__link" href="#">contact</a></li>
-                    <li class="menu__item"><a class="menu__link" href="#">purchase</a></li>
-                </ul>
-            </nav>
-        </div>
+      <div class="header__inner">
+        <a class="header__logo-link" href="#">
+          <img class="header__logo-img" src="images/logo.svg" alt="fashion logo">
+        </a>
+        <nav class="header__menu">
+          <ul class="menu__list">
+            <li class="menu__item li-row"><a class="menu__link menu__link--active" href="#">home</a></li>
+            <li class="menu__item li-row"><a class="menu__link" href="#">recipes</a></li>
+            <li class="menu__item li-row"><a class="menu__link" href="#">article</a></li>
+            <li class="menu__item li-row"><a class="menu__link" href="#">contact</a></li>
+            <li class="menu__item li-row"><a class="menu__link" href="#">purchase</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-    <section class="hero">
-        <div class="container">
-            <div class="hero__text">
-                <p class="hero__header">Vehicle</p>
-                <h1 class="hero__title title">One of Saturn’s largest rings may be newer than anyone</h1>
-                <ul class="hero__footer">
-                    <li class="date">June 6, 2019</li>
-                    <li class="name"><span class="by">By</span> Rickie Baroch</li>
-                    <li class="stats"> 4 comments</li>
-                </ul>
+    <section class="slider">
+      <!-- Slider main container -->
+      <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide swiper__bg" style="background: url('images/slider-image-1.jpg');">
+            <div class="slider__text">
+              <div class="container">
+                <div class="slider__text-box">
+                  <p class="slider__heading">Vehicle</p>
+                  <h1 class="slider__title title">One of Saturn’s largest rings may be newer than anyone</h1>
+                  <ul class="slider__text-footer">
+                    <li class="slider__text-footer-date li-row">June 6, 2019</li>
+                    <li class="slider__text-footer-author li-row">
+                      <span class="slider__text-footer-by">By</span>
+                      <a class="slider__text-footer-author" href="#">Rickie Baroch</a>
+                    </li>
+                    <li class="slider__text-footer-stats li-row">
+                      <a class="slider__text-stats-link" href="#">4 comments</a>
+                    </li>
+                  </ul>
+                  <a class="slider__btn-more" href="#">MORE</a>
+                </div>
+              </div>
             </div>
+          </div>
+          <div class="swiper-slide swiper__bg" style="background: url('images/slider-image-2.jpg');">
+            <div class="slider__text">
+              <div class="container">
+                <div class="slider__text-box">
+                  <p class="slider__heading">Vehicle</p>
+                  <h1 class="slider__title title">One of Saturn’s largest rings may be newer than anyone</h1>
+                  <ul class="slider__text-footer">
+                    <li class="slider__text-footer-date li-row">June 6, 2019</li>
+                    <li class="slider__text-footer-author li-row">
+                      <span class="slider__text-footer-by">By</span>
+                      <a class="slider__text-footer-author" href="#">Rickie Baroch</a>
+                    </li>
+                    <li class="slider__text-footer-stats li-row">
+                      <a class="slider__text-stats-link" href="#">4 comments</a>
+                    </li>
+                  </ul>
+                  <a class="slider__btn-more" href="#">MORE</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide swiper__bg" style="background: url('images/slider-image-3.jpg');">
+            <div class="slider__text">
+              <div class="container">
+                <div class="slider__text-box">
+                  <p class="slider__heading">Vehicle</p>
+                  <h1 class="slider__title title">One of Saturn’s largest rings may be newer than anyone</h1>
+                  <ul class="slider__text-footer">
+                    <li class="slider__text-footer-date li-row">June 6, 2019</li>
+                    <li class="slider__text-footer-author li-row">
+                      <span class="slider__text-footer-by">By</span>
+                      <a class="slider__text-footer-author" href="#">Rickie Baroch</a>
+                    </li>
+                    <li class="slider__text-footer-stats li-row">
+                      <a class="slider__text-stats-link" href="#">4 comments</a>
+                    </li>
+                  </ul>
+                  <a class="slider__btn-more" href="#">MORE</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
 
+    </section>
+  </main>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
