@@ -21,7 +21,7 @@ $('.swiper-container').each(function(){
     var mySwiper = new Swiper ('.swiper-container', {
         direction: 'horizontal',
         loop: true,
-        effect: 'fade',
+        effect: 'slide',
         autoplay: {
             delay: 3000,
         },

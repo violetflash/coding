@@ -1,0 +1,21 @@
+@media (max-width: 960px) {
+    .header__menu-btn {
+        display: block;
+    }
+
+    .nav__list {
+        display: none;
+        position: absolute;
+        z-index: 2;
+        top: 120px;
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+
+    .nav__item {
+        display: block;
+        text-align: center;
+
+    }
+}

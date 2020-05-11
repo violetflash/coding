@@ -7,14 +7,12 @@ $(function () {
     });
 
     $('.slider-bottom__inner').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
+        slidesToShow: 6,
+        slidesToScroll: 6,
         asNavFor: '.slider-top__inner',
         variableWidth: true,
         focusOnSelect: true,
-        infinite: true,
-        autoplay: true,
-        autoplaySpeed: 5000,
+        infinite: false,
 
     })
 
