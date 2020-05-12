@@ -3,10 +3,11 @@
         display: block;
     }
 
-    .nav__list {
-        display: none;
+    .nav__list,
+    .drop-down__list {
+        /*display: none;*/
         position: absolute;
-        z-index: 2;
+        z-index: 6;
         top: 120px;
         left: 0;
         right: 0;
@@ -16,6 +17,5 @@
     .nav__item {
         display: block;
         text-align: center;
-
     }
 }
