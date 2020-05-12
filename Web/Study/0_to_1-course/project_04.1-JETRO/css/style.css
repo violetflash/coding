@@ -147,6 +147,7 @@ ul {
     position: absolute;
     bottom: 32px;
     left: 36px;
+    height: auto;
 }
 
 
@@ -175,7 +176,6 @@ ul {
     background-position: center center;
     width: 140px;
     min-height: 120px;
-    /*margin-right: 20px;*/
     cursor: pointer;
 }
 
@@ -203,11 +203,6 @@ ul {
     position: absolute;
     left: 0;
     top: 5px;
-    transition: all 1s;
-}
-
-.icon:hover {
-    transform: rotate(-90deg);
 }
 
 .info__text {
@@ -282,7 +277,7 @@ ul {
     color: #b9b9b9;
     font-size: 16px;
     line-height: 18px;
-    /*margin-bottom: 6px;*/
+
 }
 
 .works__date {

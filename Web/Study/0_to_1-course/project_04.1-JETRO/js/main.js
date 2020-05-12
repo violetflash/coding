@@ -23,28 +23,31 @@ $(function () {
                     infinite: true,
                     // variableWidth: false,
                     adaptiveHeight: true,
-
                 }
             },
             {
                 breakpoint: 780,
                 settings: {
                     slidesToShow: 4,
-                    slidesToScroll: 2
+                    // slidesToScroll: 1
                 }
             },
-            // {
-            //     breakpoint: 480,
-            //     settings: {
-            //         slidesToShow: 1,
-            //         slidesToScroll: 1
-            //     }
-            // }
+            {
+                breakpoint: 640,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            }
         ]
     });
-
-    $slickSlider.find(".slick-slide").height("auto");
-    $slickSlider.slickSetOption(null, null, true);
 
     $('.nav__btn-menu').on('click', function () {
         $('.nav__list').slideToggle();
