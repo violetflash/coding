@@ -1,0 +1,16 @@
+body {
+  background-color: #ccc;
+}
+
+menu {
+  padding: 0;
+}
+menu li {
+  text-decoration: underline;
+}
+menu a {
+  background-color: green;
+}
+menu a:hover {
+  color: red;
+}

@@ -1,0 +1,25 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #ccc;
+}
+
+.test {
+  margin: 0;
+  padding: 3px;
+}
+
+.nav__list {
+  margin: 0;
+  .nav__item {
+    padding: 4px;
+  }
+}

@@ -9,9 +9,6 @@ html {
 }
 
 a {
-    /*на строчные элементов не так хорошо работают многие разные свойства. Исправим это*/
-    display: inline-block;
-    color: #000;
     text-decoration: none;
 }
 
@@ -23,5 +20,9 @@ ul {
 
 li {
     display: inline-block;
+}
+
+p {
+    margin: 0;
 }
 
