@@ -106,7 +106,7 @@ p{
 }
 
 .swiper-container {
-    /*width: 100%;*/
+    width: 100%;
     height: auto;
 }
 
@@ -230,22 +230,31 @@ p{
 
 /*  ------x----- MAIN SECTION ------x----- */
 
-.main__container {
-    max-width: 1430px;
-    margin: 0 auto;
-    padding: 0 15px;
+.main-screen {
     display: flex;
     justify-content: space-between;
 }
 
-.left-side-top {
+.container {
+    max-width: 1430px;
+    margin: 0 auto;
+    padding: 0 15px;  
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.articles__top {
     max-width: 770px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-bottom: 74px;
 }
 
-.left-item {
+.articles__item {
     margin-bottom: 30px;
     max-width: 370px;
     text-align: center;
@@ -253,38 +262,40 @@ p{
     padding-bottom: 14px;
 }
 
-.item__img {
+.articles__img {
     display: block;
     margin-bottom: 15px;
 }
 
-.tag {
+.articles__tag {
     font-family: 'PT Sans', sans-serif;
     font-size: 12px;
     line-height: 16px;
     text-transform: uppercase;
     margin-bottom: 4px;
 }
-.tag-link {
+.articles__tag-link {
     color: #C9A96E;
 }
 
-.item__title {
+.articles__item-title {
+    display: block;
     font-size: 20px;
     line-height: 28px;
     color: #171717;
-    padding: 0 42px 0 43px;
-    margin-bottom: 10px;
+    /* padding: 0 42px 0 43px; */
+    max-width: 285px;
+    margin: 0 auto 10px;
 }
 
-.item__footer-list {
-
+.articles__info {
     font-size: 12px;
     line-height: 16px;
     color: #666;
+    margin-bottom: 14px;
 }
 
-.item__footer-list li+li {
+.articles__info li+li {
     margin-left: 12px;
 }
 
@@ -295,3 +306,40 @@ p{
 .author:hover {
     text-decoration: underline;
 }
+
+.articles__bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 770px;
+    margin-left: 115px;
+}
+
+.articles__item-big {
+    max-width: 770px;
+    text-align: left;
+}
+
+.articles__item-title--big {
+    margin: 0 0 12px;  /*  Отменяет центрирование блока  */
+    min-width: 100%;
+}
+
+.articles__item-text {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    color: #666;
+    padding: 0 30px;
+}
+
+.articles__item-text--big {
+    padding: 0 126px 0 30px;
+}
+
+.articles__stats-link {
+    color: #666;
+}
+
+
+

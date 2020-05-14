@@ -119,7 +119,7 @@ body {
     padding-top: 15px;
 }
 
-.main {
+.articles {
     max-width: 620px;
     width: 100%;
     padding: 10px 0 20px;
@@ -129,7 +129,7 @@ body {
     transition: all .3s;
 }
 
-.main:hover {
+.articles:hover {
     background-color: #336618;
     color: #000;
 }
