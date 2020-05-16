@@ -52,8 +52,7 @@ p{
     display: inline-block;
 }
 
-.menu__link,
-.footer__link{
+.menu__link {
     position: relative;
     font-family: 'PT Serif', serif;
     font-size: 14px;
@@ -62,14 +61,7 @@ p{
     text-transform: capitalize;
 }
 
-.footer__link {
-    font-family: 'PT Sans', sans-serif;
-    line-height: 18px;
-    color: #666;
-}
-
-.menu__link::before,
-.footer__link::before {
+.menu__link::before {
     content: '';
     opacity: 0;
     width: 100%;
@@ -80,8 +72,8 @@ p{
     visibility: hidden;
 }
 
-.menu__link:hover::before,
-.footer__link:hover::before {
+.menu__link:hover::before {
+    /*display: block;*/
     visibility: visible;
     opacity: 1;
     -webkit-transition: all .3s;
@@ -89,18 +81,15 @@ p{
     transition: all .3s;
 }
 
-.menu__list li + li,
-.footer__menu-list li + li {
+.menu__list li + li {
     margin-left: 31px;
 }
 
-.menu__link--active,
-.footer__link--active {
+.menu__link--active {
     color: #c9a96e;
 }
 
-.menu__link--active:hover::before,
-.footer__link--active:hover::before {
+.menu__link--active:hover::before {
     display: none;
 }
 
@@ -308,6 +297,7 @@ p{
     opacity: 1;
 }
 
+.article-tag,
 .article-tag {
     font-family: 'PT Sans', sans-serif;
     font-size: 12px;
@@ -462,8 +452,7 @@ p{
 
 .aside__title,
 .cat__title,
-.social__title,
-.tags__title {
+.social__title {
     display: block;
     padding: 15px 0;
     border: 1px solid #e5e5e5;
@@ -476,10 +465,6 @@ p{
 
 .aside__about-article {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.aside__about-article:hover {
-    box-shadow: none;
 }
 
 .aside__about-img {
@@ -596,27 +581,6 @@ p{
     color: #999;
 }
 
-.tags__list {
-    display: flex;
-    flex-wrap: wrap;
-    /*justify-content: flex-start;*/
-}
-
-.tags__link {
-    display: block;
-    color: #666;
-    line-height: 19px;
-    background-color: #f8f9fa;
-    padding: 5px 14px;
-    margin: 0 7px 7px 0;
-    transition: all .3s;
-    border: 1px solid transparent;
-}
-
-.tags__link:hover {
-    color: #c9a96e;
-}
-
 
 
 
@@ -630,13 +594,19 @@ p{
 }
 
 .instagram__slider {
-    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #171717;
+    /*overflow: hidden;*/
+
 }
 
 .swiper2 {
     width: 100%;
     padding-top: 10px;
     padding-bottom: 70px;
+    /*overflow: hidden;*/
 }
 
 .swiper2-slide {
@@ -645,7 +615,7 @@ p{
     width: 296px;
     height: 296px;
     background: #fff;
-    /*-webkit-box-reflect: below .5px -webkit-linear-gradient(transparent, transparent, #0000);*/
+    -webkit-box-reflect: below .5px -webkit-linear-gradient(transparent, transparent, #0006);
 }
 
 .instagram__title {
@@ -655,21 +625,6 @@ p{
     margin-bottom: 40px;
 }
 
-/* ----x---- FOOTER ----x---- */
-.footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.footer__logo-link {
-    margin-bottom: 60px;
-}
-
-.footer__menu-list {
-    margin-bottom: 30px;
-}
 
 
 

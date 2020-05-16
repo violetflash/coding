@@ -42,12 +42,12 @@ gulp.task('script', function(){
 gulp.task('html', function(){
     return gulp.src('app/*.html')
         .pipe(browserSync.reload({stream: true}))
-})
+});
 
 gulp.task('js', function(){
     return gulp.src('app/js/*.js')
         .pipe(browserSync.reload({stream: true}))
-})
+});
 
 gulp.task('browser-sync', function() {
     browserSync.init({
@@ -58,9 +58,9 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task('watch', function () {
-    return gulp.watch('app/scss/style.scss', gulp.parallel('sass'))
-    return gulp.watch('app/*.html', gulp.parallel('html'))
+    return gulp.watch('app/scss/style.scss', gulp.parallel('sass'));
+    return gulp.watch('app/*.html', gulp.parallel('html'));
     return gulp.watch('app/js/*.js', gulp.parallel('js'))
 });
 
-gulp.task('default', gulp.parallel('style', 'script', 'sass', 'watch', 'browser-sync'))
+gulp.task('default', gulp.parallel('style', 'script', 'sass', 'watch', 'browser-sync'));

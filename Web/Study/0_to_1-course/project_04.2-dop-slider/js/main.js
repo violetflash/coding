@@ -15,17 +15,20 @@ $(function () {
     });
 
     var mySwiper= new Swiper('.swiper2', {
-        // effect: 'coverflow',
-        // grabCursor: true,
-        // centeredSlides: true,
-        slidesPerView: 6,
-        // coverflowEffect : {
-        //     rotate: 0,
-        //     stretch: 0,
-        //     depth: 0,
-            // modifier: 1,
-            // slideShadows: true,
-        // },
+        // containerModifierClass: 'swiper-container-insta',
+        // slideClass: 'instagram__slider-slide',
+        // wrapperClass: 'instagram__slider-wrapper',
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflowEffect : {
+            rotate: 20,
+            stretch: 0,
+            depth: 200,
+            modifier: 1,
+            slideShadows: true,
+        },
         keyboard: true,
         loop: true,
         autoplay: {
