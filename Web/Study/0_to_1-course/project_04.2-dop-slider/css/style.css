@@ -52,7 +52,7 @@ p{
     display: inline-block;
 }
 
-.menu__link {
+.header__menu-link {
     position: relative;
     font-family: 'PT Serif', serif;
     font-size: 14px;
@@ -61,7 +61,7 @@ p{
     text-transform: capitalize;
 }
 
-.menu__link::before {
+.header__menu-link::before {
     content: '';
     opacity: 0;
     width: 100%;
@@ -72,7 +72,7 @@ p{
     visibility: hidden;
 }
 
-.menu__link:hover::before {
+.header__menu-link:hover::before {
     /*display: block;*/
     visibility: visible;
     opacity: 1;
@@ -81,15 +81,15 @@ p{
     transition: all .3s;
 }
 
-.menu__list li + li {
+.header__menu-list li + li {
     margin-left: 31px;
 }
 
-.menu__link--active {
+.header__menu-link--active {
     color: #c9a96e;
 }
 
-.menu__link--active:hover::before {
+.header__menu-link--active:hover::before {
     display: none;
 }
 

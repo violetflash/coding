@@ -564,17 +564,17 @@ p {
     max-width: 185px;
 }
 
-.footer__socials {
+.footer__socials-list {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.footer__socials li {
+.footer__socials-list li {
     display: inline-block;
 }
 
-.footer__socials li + li {
+.footer__socials-list li + li {
     /*margin-left: 20px;*/
 }
 

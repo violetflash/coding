@@ -28,7 +28,7 @@ body {
     border-top: 2px solid #c4c4c4;
 }
 
-.menu__list {
+.header__menu-list {
     display: flex;
     justify-content: center;
     list-style: none;

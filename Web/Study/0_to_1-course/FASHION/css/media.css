@@ -1,0 +1,33 @@
+@media (max-width: 1366px) {
+    .main-screen-wrapper {
+        flex-direction: column;
+    }
+    .title {
+        font-size: 30px;
+    }
+    .articles__top {
+        max-width: 100%;
+    }
+    .articles__bottom {
+        max-width: 100%;
+    }
+    .articles__bottom {
+        margin-left: 0;
+    }
+    .pag-list {
+        margin: 30px auto;
+    }
+    .aside {
+        margin-right: 0;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 100%;
+    }
+    .instagram {
+        padding-right: 20px;
+    }
+    .swiper-pagination {
+        display: none;
+    }
+}

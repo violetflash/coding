@@ -9,33 +9,30 @@
   <link rel="stylesheet" href="css/normalize.css"/>
   <link rel="stylesheet" href="css/swiper.min.css"/>
   <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/media.css">
 </head>
 <body>
   <header class="header">
     <div class="header__inner">
       <a class="header__logo-link" href="#">
-        <img
-            class="header__logo-img"
-            src="images/logo.svg"
-            alt="fashion logo"
-        />
+        <img class="header__logo-img" src="images/logo.svg" alt="fashion logo"/>
       </a>
       <nav class="header__menu">
-        <ul class="menu__list">
-          <li class="menu__item li-row">
-            <a class="menu__link menu__link--active" href="#">home</a>
+        <ul class="header__menu-list">
+          <li class="header__menu-item li-row">
+            <a class="header__menu-link header__menu-link--active" href="#">home</a>
           </li>
-          <li class="menu__item li-row">
-            <a class="menu__link" href="#">recipes</a>
+          <li class="header__menu-item li-row">
+            <a class="header__menu-link" href="#">recipes</a>
           </li>
-          <li class="menu__item li-row">
-            <a class="menu__link" href="#">article</a>
+          <li class="header__menu-item li-row">
+            <a class="header__menu-link" href="#">article</a>
           </li>
-          <li class="menu__item li-row">
-            <a class="menu__link" href="#">contact</a>
+          <li class="header__menu-item li-row">
+            <a class="header__menu-link" href="#">contact</a>
           </li>
-          <li class="menu__item li-row">
-            <a class="menu__link" href="#">purchase</a>
+          <li class="header__menu-item li-row">
+            <a class="header__menu-link" href="#">purchase</a>
           </li>
         </ul>
       </nav>
@@ -103,11 +100,7 @@
             </div>
           </div>
           <div class="swiper-slide .swiper1-slide">
-            <img
-                class="swiper-bg"
-                src="images/slider/slider-image-3.jpg"
-                alt="image description"
-            />
+            <img class="swiper-bg" src="images/slider/slider-image-3.jpg" alt="image description"/>
             <div class="gradient"></div>
             <div class="slider__text">
               <div class="slider__container">
@@ -135,11 +128,7 @@
             </div>
           </div>
           <div class="swiper-slide .swiper1-slide">
-            <img
-                class="swiper-bg"
-                src="images/slider/slider-image-4.jpg"
-                alt="image description"
-            />
+            <img class="swiper-bg" src="images/slider/slider-image-4.jpg" alt="image description"/>
             <div class="gradient"></div>
             <div class="slider__text">
               <div class="slider__container">
@@ -166,11 +155,7 @@
             </div>
           </div>
           <div class="swiper-slide .swiper1-slide">
-            <img
-                class="swiper-bg"
-                src="images/slider/slider-image-5.jpg"
-                alt="image description"
-            />
+            <img class="swiper-bg" src="images/slider/slider-image-5.jpg" alt="image description"/>
             <div class="gradient"></div>
             <div class="slider__text">
               <div class="slider__container">
@@ -410,6 +395,7 @@
               <a class="continue-btn" href="#">Continue Reading</a>
             </article>
           </section>
+
           <section class="aside__articles">
             <p class="aside__title">Featured posts</p>
             <article class="article-item">
@@ -683,42 +669,78 @@
           <img class="footer__logo-img" src="images/logo.svg" alt="fashion logo"/>
         </a>
         <ul class="footer__menu-list">
-          <li class="footer__menu-item li-row"><a class="footer__link footer__link--active" href="#">Home</a></li>
+          <li class="footer__menu-item li-row"><a class="footer__link" href="#">Home</a></li>
           <li class="footer__menu-item li-row"><a class="footer__link" href="#">Recipes</a></li>
           <li class="footer__menu-item li-row"><a class="footer__link" href="#">Article</a></li>
           <li class="footer__menu-item li-row"><a class="footer__link" href="#">Contact</a></li>
           <li class="footer__menu-item li-row"><a class="footer__link" href="#">Purchase</a></li>
         </ul>
 
-        <ul class="footer__socials">
+        <ul class="footer__socials-list">
           <li class="footer__socials-item">
             <a class="footer__socials-link" href="#">
-              <svg class="footer__socials-svg"></svg>
+              <svg class="footer__socials-icon" width="11" height="20" viewBox="0 0 11 20"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M10.5858 0.00416134L7.94737 0C4.98322 0 3.06766 1.9319 3.06766 4.92203V7.19141H0.414863C0.18563 7.19141 0 7.37409 0 7.59943V10.8875C0 11.1128 0.185842 11.2953 0.414863 11.2953H3.06766V19.5922C3.06766 19.8175 3.25329 20 3.48252 20H6.94366C7.17289 20 7.35852 19.8173 7.35852 19.5922V11.2953H10.4603C10.6895 11.2953 10.8751 11.1128 10.8751 10.8875L10.8764 7.59943C10.8764 7.49124 10.8326 7.38762 10.7549 7.31105C10.6772 7.23448 10.5714 7.19141 10.4613 7.19141H7.35852V5.26763C7.35852 4.34298 7.58267 3.87358 8.808 3.87358L10.5853 3.87295C10.8144 3.87295 11 3.69027 11 3.46514V0.411972C11 0.187052 10.8146 0.00457747 10.5858 0.00416134Z"/>
+              </svg>
             </a>
           </li>
           <li class="footer__socials-item">
             <a class="footer__socials-link" href="#">
-              <svg class="footer__socials-svg"></svg>
+              <svg class="footer__socials-icon" width="20" height="18" viewBox="0 0 20 18"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M20 2.62051C19.2644 2.95748 18.473 3.18539 17.6431 3.28718C18.4905 2.76275 19.1407 1.93297 19.4477 0.942599C18.6548 1.42846 17.7762 1.78092 16.842 1.9709C16.0935 1.14744 15.0271 0.632812 13.8462 0.632812C11.5805 0.632812 9.74295 2.53105 9.74295 4.87152C9.74295 5.20375 9.77937 5.52713 9.84975 5.83755C6.43961 5.66084 3.41596 3.97345 1.39203 1.40823C1.03889 2.03412 0.836317 2.76275 0.836317 3.53943C0.836317 5.00966 1.56125 6.3076 2.66165 7.06752C1.98935 7.04571 1.35622 6.8551 0.803268 6.53678C0.802962 6.5548 0.802962 6.57281 0.802962 6.59052C0.802962 8.64428 2.21794 10.3573 4.09468 10.7464C3.75073 10.8438 3.3875 10.8953 3.01386 10.8953C2.74886 10.8953 2.49212 10.8691 2.24181 10.8197C2.76385 12.5033 4.27889 13.7289 6.07485 13.7633C4.67028 14.9004 2.90125 15.5778 0.978304 15.5778C0.647817 15.5778 0.320389 15.5579 0 15.5184C1.81493 16.7215 3.97228 17.4229 6.28936 17.4229C13.8367 17.4229 17.9641 10.9642 17.9641 5.36243C17.9641 5.17877 17.9602 4.99575 17.9522 4.8143C18.7546 4.21686 19.4501 3.47052 20 2.62051Z"/>
+              </svg>
             </a>
           </li>
           <li class="footer__socials-item">
             <a class="footer__socials-link" href="#">
-              <svg class="footer__socials-svg"></svg>
+              <svg class="footer__socials-icon" width="15" height="21" viewBox="0 0 15 21" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M13.0546 2.81774C11.741 1.4828 9.92295 0.747559 7.93556 0.747559C4.89971 0.747559 3.03253 2.06485 2.00076 3.16985C0.72917 4.53165 0 6.33983 0 8.13088C0 10.3797 0.888595 12.1057 2.37667 12.7478C2.47657 12.7911 2.57709 12.813 2.67563 12.813C2.98956 12.813 3.2383 12.5955 3.32448 12.2468C3.3747 12.0467 3.4911 11.553 3.5417 11.3387C3.65004 10.9155 3.56251 10.712 3.32626 10.4173C2.89588 9.87821 2.69545 9.24078 2.69545 8.41119C2.69545 5.94706 4.42882 3.32819 7.64145 3.32819C10.1905 3.32819 11.774 4.8618 11.774 7.33049C11.774 8.88834 11.457 10.3311 10.8812 11.3931C10.4811 12.131 9.77756 13.0106 8.69747 13.0106C8.2304 13.0106 7.81085 12.8075 7.5461 12.4534C7.29601 12.1187 7.21359 11.6863 7.31417 11.2357C7.4278 10.7266 7.58273 10.1955 7.73267 9.68202C8.00616 8.74428 8.26469 7.85859 8.26469 7.15196C8.26469 5.94328 7.56272 5.13116 6.51809 5.13116C5.19049 5.13116 4.15041 6.5585 4.15041 8.38063C4.15041 9.27427 4.37477 9.94265 4.47634 10.1993C4.3091 10.9494 3.31512 15.4088 3.12658 16.2498C3.01757 16.7407 2.36085 20.6179 3.44783 20.927C4.66913 21.2744 5.76079 17.4983 5.87189 17.0715C5.96195 16.7245 6.27704 15.4123 6.47014 14.6057C7.0597 15.2068 8.00899 15.6132 8.93267 15.6132C10.674 15.6132 12.24 14.7837 13.3422 13.2777C14.4112 11.817 15 9.78113 15 7.54531C15 5.7974 14.2909 4.07424 13.0546 2.81774Z"/>
+              </svg>
             </a>
           </li>
           <li class="footer__socials-item">
             <a class="footer__socials-link" href="#">
-              <svg class="footer__socials-svg"></svg>
+              <svg class="footer__socials-icon" width="22" height="15" viewBox="0 0 22 15" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M0.0040739 7.31966C-0.125839 3.84433 2.8702 0.632711 6.29412 0.591044C8.0392 0.439816 9.73697 1.12835 11.0576 2.25134C10.5159 2.85655 9.96467 3.45476 9.37591 4.01479C8.21328 3.29712 6.81349 2.75019 5.4547 3.23593C3.26309 3.86998 1.93585 6.49912 2.74688 8.6775C3.41853 10.9526 6.14212 12.2012 8.27666 11.2455C9.38193 10.8434 10.1106 9.8072 10.4304 8.69382C9.16368 8.66818 7.89667 8.68421 6.62994 8.64866C6.62679 7.8829 6.62363 7.12006 6.62679 6.35431C8.73924 6.3511 10.8549 6.34469 12.9705 6.36392C13.1004 8.24014 12.8279 10.2481 11.6274 11.7539C9.9836 13.9035 6.94655 14.5343 4.4759 13.691C1.85383 12.816 -0.0529962 10.1321 0.0040739 7.31966Z"/>
+                <path
+                    d="M18.0102 3.6814C18.6703 3.6814 19.33 3.6814 19.9932 3.6814C19.9968 4.36942 20.0031 5.06088 20.0067 5.74858C20.6699 5.75547 21.3366 5.75891 22 5.76236C22 6.45038 22 7.13464 22 7.82266C21.3369 7.8261 20.6702 7.82954 20.0067 7.83299C20.0001 8.52445 19.9968 9.21216 19.9932 9.90362C19.33 9.90018 18.6663 9.90362 18.0065 9.90362C18.0002 9.21216 18.0002 8.52445 17.9933 7.83643C17.3301 7.82923 16.6634 7.8261 16 7.82235C16 7.13433 16 6.45006 16 5.76204C16.6634 5.7586 17.3268 5.75516 17.9933 5.74827C17.9966 5.06088 18.0032 4.36942 18.0102 3.6814Z"/>
+              </svg>
             </a></li>
           <li class="footer__socials-item">
             <a class="footer__socials-link" href="#">
-              <svg class="footer__socials-svg"></svg>
+              <svg class="footer__socials-icon" width="20" height="15" viewBox="0 0 20 15" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M8.07247 6.84028C8.07247 6.84028 9.96213 6.69327 9.96213 4.3413C9.96213 1.99587 8.41658 0.845215 6.45439 0.845215H0V13.9792H6.45381C6.45381 13.9792 10.3964 14.1072 10.3964 10.0998C10.3967 10.0998 10.5658 6.84028 8.07247 6.84028ZM10.8855 9.23079C10.8855 9.20499 10.8917 4.18776 15.649 4.18776C20.6724 4.18776 19.966 9.88879 19.966 9.88879H13.5421C13.5421 12.3241 15.7216 12.1705 15.7216 12.1705C17.7862 12.1705 17.714 10.7582 17.714 10.7582H19.8934C19.8934 14.5097 15.649 14.2542 15.649 14.2542C10.5596 14.2542 10.8855 9.23079 10.8855 9.23079ZM15.6975 6.11141C13.7834 6.11141 13.5177 8.13111 13.5177 8.13111H17.5871C17.5871 8.13111 17.6174 6.11141 15.6975 6.11141ZM6.4541 3.17791H2.84389V6.11141H6.23066C6.81641 6.11141 7.32964 5.91311 7.32964 4.54551C7.32964 3.17791 6.4541 3.17791 6.4541 3.17791ZM6.27324 11.6465H2.84389V8.13111H6.4541C6.4541 8.13111 7.76447 8.11837 7.75831 9.93977C7.75831 11.474 6.78647 11.6337 6.27324 11.6465ZM12.9804 3.23572V1.61853H18.1004V3.23572H12.9804Z"/>
+              </svg>
             </a></li>
           <li class="footer__socials-item">
             <a class="footer__socials-link" href="#">
-              <svg class="footer__socials-svg"></svg>
-            </a></li>
+              <svg class="footer__socials-icon" width="20" height="21" viewBox="0 0 20 21" fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M6.25 0.151611H13.75C17.2013 0.151611 20 2.97863 20 6.46474V14.0405C20 17.5266 17.2013 20.3536 13.75 20.3536H6.25C2.79875 20.3536 0 17.5266 0 14.0405V6.46474C0 2.97863 2.79875 0.151611 6.25 0.151611ZM13.75 18.4597C16.1625 18.4597 18.125 16.4774 18.125 14.0405V6.46474C18.125 4.02787 16.1625 2.04555 13.75 2.04555H6.25C3.8375 2.04555 1.875 4.02787 1.875 6.46474V14.0405C1.875 16.4774 3.8375 18.4597 6.25 18.4597H13.75Z"/>
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M5 10.2527C5 7.46351 7.23875 5.20215 10 5.20215C12.7613 5.20215 15 7.46351 15 10.2527C15 13.0418 12.7613 15.3032 10 15.3032C7.23875 15.3032 5 13.0418 5 10.2527ZM6.875 10.2527C6.875 11.9926 8.2775 13.4092 10 13.4092C11.7225 13.4092 13.125 11.9926 13.125 10.2527C13.125 8.51149 11.7225 7.09609 10 7.09609C8.2775 7.09609 6.875 8.51149 6.875 10.2527Z"/>
+                <path
+                    d="M15 5.20209C15.5523 5.20209 16 4.74985 16 4.19199C16 3.63412 15.5523 3.18188 15 3.18188C14.4477 3.18188 14 3.63412 14 4.19199C14 4.74985 14.4477 5.20209 15 5.20209Z"/>
+              </svg>
+            </a>
+          </li>
         </ul>
+        <section class="footer__copyright">
+          <p class="footer__copyright-text">
+            @2019 Logwork. All Right Reserved.
+          </p>
+        </section>
       </footer>
     </div>
 
