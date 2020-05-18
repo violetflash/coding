@@ -33,6 +33,11 @@ $(function () {
             delay: 3000,
             disableOnInteraction: false,
         },
+        breakpoints: {
+            1366: {
+                slidesPerView: 'auto',
+            },
+        },
 
     });
 

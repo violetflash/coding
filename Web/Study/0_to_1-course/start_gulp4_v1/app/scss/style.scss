@@ -2,10 +2,8 @@ html {
   box-sizing: border-box;
 }
 
-body {
-  background-color: green;
-}
-
-.box {
-  display: flex;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
