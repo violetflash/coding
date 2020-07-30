@@ -5,8 +5,6 @@ $(function () {
     })
     .on('mouseleave', function () {
         $(this).parent().css({'box-shadow' : '0 2px 6px rgba(0, 0, 0, 0.1)'})
-
-
     });
 
     var mySwiper= new Swiper('.swiper1', {

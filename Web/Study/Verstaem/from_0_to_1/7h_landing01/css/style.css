@@ -592,7 +592,7 @@ header {
     padding: 55px 0 40px ;
 }
 
-.advantages__inner {
+.intro__inner {
     display: flex;
     justify-content: space-between;
     text-align: center;
