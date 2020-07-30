@@ -19,3 +19,8 @@ html {
   border: 5px solid #000;
   margin-bottom: 10px;
 }
+
+.inner {
+  display: flex;
+  justify-content: space-around;
+}
