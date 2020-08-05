@@ -26,8 +26,9 @@ body {
   min-width: 320px;
   overflow-x: hidden;
   color: #fff;
-  font-size: 15px;
   position: relative;
+  @extend %ubuntu-light;
+  font-size: 17px;
 }
 
 .container {
@@ -49,6 +50,8 @@ body {
 .title {
   font-size: 44px;
   line-height: 53px;
+  @extend %sf-regular;
+
 }
 
 .scroll {

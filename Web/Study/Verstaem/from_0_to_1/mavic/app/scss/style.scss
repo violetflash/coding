@@ -1,2 +1,41 @@
 @import "global";
+@import "libs";
 @import "fonts";
+@import "vars";
+
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 30px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 30px;
+    text-transform: uppercase;
+    font-size: 15px;
+    line-height: 17px;
+    @extend %ubuntu-medium;
+
+  }
+}
+
+.menu {
+  &__list-item {
+    display: inline-block;
+    & + & {
+      margin-left: 20px;
+    }
+  }
+
+}
+
+
+
+
+
+
+
+@import "media";
