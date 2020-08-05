@@ -34,26 +34,27 @@ gulp.task('script', function(){
         'node_modules/slick-carousel/slick/slick.js',
         'node_modules/magnific-popup/dist/jquery.magnific-popup.js'
     ])
-            .pipe(concat('libs.min.js'))
-            .pipe(uglify())
-            .pipe(gulp.dest('app/js'))
+        .pipe(concat('libs.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('app/js'))
 });
 
 gulp.task('html', function(){
     return gulp.src('app/*.html')
         .pipe(browserSync.reload({stream: true}))
-})
+});
 
 gulp.task('js', function(){
     return gulp.src('app/js/*.js')
         .pipe(browserSync.reload({stream: true}))
-})
+});
 
 gulp.task('browser-sync', function() {
     browserSync.init({
         server: {
             baseDir: "app/"
-        }
+        },
+        // injectChanges: false,
     });
 });
 

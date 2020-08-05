@@ -1,0 +1,57 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-size: inherit;
+}
+
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+  color: #fff;
+  font-size: 15px;
+  position: relative;
+}
+
+.container {
+  width: 1270px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.page-section {
+  min-height: 100vh;
+  background-image: url('../images/page-bg.jpg');
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 74px 0 50px;
+}
+
+.title {
+  font-size: 44px;
+  line-height: 53px;
+}
+
+.scroll {
+  padding: 13px 0 30px;
+  text-align: center;
+}
