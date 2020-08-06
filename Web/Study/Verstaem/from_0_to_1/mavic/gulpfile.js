@@ -54,7 +54,7 @@ gulp.task('browser-sync', function() {
         server: {
             baseDir: "app/"
         },
-        // injectChanges: false,
+        injectChanges: false,
     });
 });
 
