@@ -140,7 +140,7 @@
     &::after {
       position: absolute;
       content: '';
-      width: 565px;
+      width: 100%;
       height: 280px;
       top: -15px;
       right: -17px;
@@ -198,10 +198,53 @@
       }
     }
   }
-
-
-
 }
+
+.benefits {
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    display: flex;
+    margin-bottom: 100px;
+    max-width: 610px;
+    align-items: flex-end;
+  }
+
+  &__num {
+    @extend %ubuntu-bold;
+    font-size: 36px;
+    line-height: 41px;
+    margin-right: 8px;
+  }
+
+  &__text {
+    max-width: 300px;
+    font-size: 15px;
+    line-height: 130%;
+    @extend %ubuntu-light;
+  }
+
+  &__img {
+    position: relative;
+    width: 195px;
+    height: 130px;
+    margin-right: 32px;
+    &::before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 130px;
+      top: -12px;
+      right: -12px;
+      border: 2px solid #fff;
+      z-index: -1;
+    }
+  }
+}
+
 
 
 
