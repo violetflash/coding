@@ -204,13 +204,36 @@
   &__items {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 53px;
   }
 
   &__item {
     display: flex;
     margin-bottom: 100px;
     max-width: 610px;
-    align-items: flex-end;
+    //align-items: flex-end;
+    &:nth-child(even) {
+      margin-top: 30px;
+    }
+    &:nth-child(odd) {
+      margin-left: 30px;
+    }
+  }
+
+  &__item-1 {
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      height: 48px;
+      width: 100%;
+      background-image: url('../images/1-2.svg');
+      top: 38px;
+      right: -90px;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
   }
 
   &__num {
@@ -218,13 +241,6 @@
     font-size: 36px;
     line-height: 41px;
     margin-right: 8px;
-  }
-
-  &__text {
-    max-width: 300px;
-    font-size: 15px;
-    line-height: 130%;
-    @extend %ubuntu-light;
   }
 
   &__img {
@@ -242,6 +258,24 @@
       border: 2px solid #fff;
       z-index: -1;
     }
+  }
+
+  &__info {
+    max-width: 300px;
+  }
+
+  &__info-title {
+    max-width: 123px;
+    font-size: 21px;
+    line-height: 24px;
+    @extend %ubuntu-bold;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    font-size: 15px;
+    line-height: 18px;
+    @extend %ubuntu-light;
   }
 }
 
