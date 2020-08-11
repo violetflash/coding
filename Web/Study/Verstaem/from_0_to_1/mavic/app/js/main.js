@@ -9,7 +9,7 @@ $(function () {
             '<path d="M0.78161 17L9 9L0.78161 1" stroke="black"/>' +
             '</svg></button>',
         infinite: false,
-        fade: true,
+        autoplay: true,
         speed: 2000,
     })
 });

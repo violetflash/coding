@@ -11,6 +11,7 @@
   z-index: 10;
 
 
+
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -155,10 +156,14 @@
     line-height: 28px;
     text-align: right;
     @extend %ubuntu-medium;
-    max-width: 285px;
+    max-width: 320px;
     left: -250px;
-    bottom: 30px;
+    bottom: 0;
     z-index: 1;
+    background-color: #ececec;
+    padding: 15px;
+    color: #000;
+    border: 3px double #000;
   }
 
   &__slider {
@@ -204,33 +209,58 @@
   &__items {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+
     margin-top: 53px;
+    padding-left: 30px;
   }
 
   &__item {
     display: flex;
     margin-bottom: 100px;
     max-width: 610px;
-    //align-items: flex-end;
+    align-items: flex-end;
     &:nth-child(even) {
       margin-top: 30px;
+      margin-left: 40px;
     }
     &:nth-child(odd) {
       margin-left: 30px;
+      align-self: flex-start;
+
     }
   }
 
-  &__item-1 {
+  &__item-1,
+  &__item-3 {
     position: relative;
     &::before {
       position: absolute;
       content: "";
       height: 48px;
-      width: 100%;
+      width: 245px;
       background-image: url('../images/1-2.svg');
-      top: 38px;
-      right: -90px;
+      top: 27px;
+      right: -55px;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+  }
+
+
+  &__item-3 {
+    padding-left: 25px;
+    &::before {
+      top: 40px;
+      right: -55px;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      height: 65px;
+      width: 463px;
+      background-image: url('../images/2-3.svg');
+      top: -85px;
+      right: -15px;
       background-repeat: no-repeat;
       background-position: 0 0;
     }

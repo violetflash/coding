@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *, *::before, *::after {
@@ -35,16 +36,22 @@ body {
   width: 1270px;
   padding: 0 15px;
   margin: 0 auto;
+  flex: 1 0 auto;
+  &--top {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
 }
 
 .page-section {
-  min-height: 100vh;
+
   background-image: url('../images/page-bg.jpg');
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
   position: relative;
-  padding: 74px 0 50px;
+
   &::before {
     content: '';
     position: absolute;
@@ -57,8 +64,12 @@ body {
   }
 
   &__wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     position: relative;
     z-index: 1;
+    padding: 74px 0 50px;
   }
 }
 
@@ -72,6 +83,7 @@ body {
 }
 
 .scroll {
-  padding: 13px 0 30px;
+  padding: 30px 0 30px;
   text-align: center;
+  flex: 0 0 auto;
 }
