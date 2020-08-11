@@ -226,43 +226,41 @@
     &:nth-child(odd) {
       margin-left: 30px;
       align-self: flex-start;
-
     }
-  }
 
-  &__item-1,
-  &__item-3 {
-    position: relative;
-    &::before {
-      position: absolute;
-      content: "";
-      height: 48px;
-      width: 245px;
-      background-image: url('../images/1-2.svg');
-      top: 27px;
-      right: -55px;
-      background-repeat: no-repeat;
-      background-position: 0 0;
+    &:nth-child(1),
+    &:nth-child(3) {
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "";
+        height: 48px;
+        width: 245px;
+        background-image: url('../images/1-2.svg');
+        top: 27px;
+        right: -55px;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+      }
     }
-  }
 
-
-  &__item-3 {
-    padding-left: 25px;
-    &::before {
-      top: 40px;
-      right: -55px;
-    }
-    &::after {
-      position: absolute;
-      content: "";
-      height: 65px;
-      width: 463px;
-      background-image: url('../images/2-3.svg');
-      top: -85px;
-      right: -15px;
-      background-repeat: no-repeat;
-      background-position: 0 0;
+    &:nth-child(3) {
+      padding-left: 25px;
+      &::before {
+        top: 40px;
+        right: -55px;
+      }
+      &::after {
+        position: absolute;
+        content: "";
+        height: 65px;
+        width: 463px;
+        background-image: url('../images/2-3.svg');
+        top: -85px;
+        right: -15px;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+      }
     }
   }
 
@@ -307,6 +305,44 @@
     line-height: 18px;
     @extend %ubuntu-light;
   }
+}
+
+.specification {
+  &__inner {
+    margin-top: 77px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    //margin-left: 60px;
+  }
+
+  &__item {
+
+  }
+
+  &__box {
+    position: relative;
+    max-width: 280px;
+    margin-bottom: 140px;
+  }
+
+  &__box-title {
+    font-size: 21px;
+    line-height: 28px;
+    @extend %ubuntu-bold;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    @extend %ubuntu-light;
+    font-size: 15px;
+    line-height: 19px;
+    margin: 0;
+  }
+
+  //&__img {
+  //  margin-top: 90px;
+  //}
 }
 
 
