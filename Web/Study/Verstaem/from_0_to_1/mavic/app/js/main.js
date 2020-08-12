@@ -12,4 +12,9 @@ $(function () {
         autoplay: true,
         speed: 2000,
     })
+
+    $('.questions__title').on('click', function () {
+        $('.questions__item').removeClass('questions__item--active');
+        $(this).parent().addClass('questions__item--active');
+    })
 });
