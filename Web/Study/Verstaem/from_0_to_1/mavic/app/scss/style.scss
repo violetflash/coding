@@ -216,7 +216,6 @@
 
   &__item {
     display: flex;
-    margin-bottom: 100px;
     max-width: 610px;
     align-items: flex-end;
     &:nth-child(even) {
@@ -226,6 +225,11 @@
     &:nth-child(odd) {
       margin-left: 30px;
       align-self: flex-start;
+    }
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      margin-bottom: 100px;
     }
 
     &:nth-child(1),
@@ -313,17 +317,61 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    //margin-left: 60px;
+    margin-left: 60px;
   }
 
-  &__item {
-
+  &__item--center {
+    margin-right: -15px;
+    margin-left: -15px;
   }
 
   &__box {
     position: relative;
     max-width: 280px;
-    margin-bottom: 140px;
+    margin-top: 10px;
+    &::before {
+      position: absolute;
+      content: '';
+      background-repeat: no-repeat;
+    }
+  }
+
+
+  &__box-2 {
+    margin-top: 140px;
+  }
+
+  &__box-4 {
+    margin-top: 160px;
+  }
+
+  &__box-1::before {
+    background-image: url('../images/pointer-1.svg');
+    width: 229px;
+    height: 115px;
+    right: -185px;
+    top: 15px;
+  }
+  &__box-2::before {
+    background-image: url('../images/pointer-2.svg');
+    width: 346px;
+    height: 82px;
+    right: -325px;
+    top: -63px;
+  }
+  &__box-3::before {
+    background-image: url('../images/pointer-3.svg');
+    width: 258px;
+    height: 104px;
+    left: -280px;
+    top: 14px;
+  }
+  &__box-4::before {
+    background-image: url('../images/pointer-4.svg');
+    width: 125px;
+    height: 90px;
+    left: -150px;
+    top: -74px;
   }
 
   &__box-title {
@@ -339,10 +387,6 @@
     line-height: 19px;
     margin: 0;
   }
-
-  //&__img {
-  //  margin-top: 90px;
-  //}
 }
 
 
