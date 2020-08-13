@@ -389,7 +389,7 @@
 }
 
 .questions {
-
+  background-attachment: fixed;
   &__inner {
     margin-left: 30px;
     margin-top: 40px;
@@ -407,6 +407,10 @@
     &--active {
       .questions__text {
         display: block;
+        //height: 100%;
+        //opacity: 1;
+        //visibility: visible;
+        //padding: 0 10px 75px 60px;
       }
       .questions__title::after {
         transform: rotate(180deg);
@@ -441,7 +445,13 @@
     font-size: 15px;
     line-height: 22px;
     display: none;
+
     margin: 0;
+    //opacity: 0;
+    //transition: all .8s;
+    &--active {
+      display: block;
+    }
   }
 }
 

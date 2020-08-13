@@ -11,10 +11,13 @@ $(function () {
         infinite: false,
         autoplay: true,
         speed: 2000,
-    })
+    });
 
     $('.questions__title').on('click', function () {
         $('.questions__item').removeClass('questions__item--active');
+        // $('.questions__text').removeClass('questions__text--active');
         $(this).parent().addClass('questions__item--active');
-    })
+        // $(this).next('.questions__text').slideToggle('slow')
+    });
+
 });
