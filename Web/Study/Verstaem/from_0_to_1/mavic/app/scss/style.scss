@@ -404,7 +404,6 @@
     margin-bottom: 5px;
     position: relative;
     background-color: rgba(0, 0, 0, 0.3);
-    position: relative;
 
     &--active {
       .questions__text {
@@ -415,16 +414,14 @@
       }
     }
 
-    &:nth-child(3){
-      &::before {
-        position: absolute;
-        content: '';
-        width: 319px;
-        height: 125px;
-        background-image: url('../images/mavic-half.png');
-        right: -391px;
-        bottom: -20px;
-      }
+    &:nth-child(3)::before {
+      position: absolute;
+      content: '';
+      width: 319px;
+      height: 125px;
+      background-image: url('../images/mavic-half.png');
+      right: -386px;
+      top: -33px;
     }
   }
   &__title {
