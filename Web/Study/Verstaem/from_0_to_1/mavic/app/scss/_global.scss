@@ -93,5 +93,11 @@ body {
     &:hover {
       border-color: #fff;
     }
+
+    &--up {
+      img {
+        transform: rotate(180deg);
+      }
+    }
   }
 }
