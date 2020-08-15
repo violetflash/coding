@@ -20,4 +20,13 @@ $(function () {
         // $(this).next('.questions__text').slideToggle('slow')
     });
 
+    $('#fullpage').fullpage({
+        autoScrolling:true,
+        scrollHorizontally: true,
+        navigation: true,
+        navigationPosition: 'right',
+        sectionSelector: '.page-section',
+    });
+
+
 });
