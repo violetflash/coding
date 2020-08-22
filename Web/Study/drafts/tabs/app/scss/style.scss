@@ -1,0 +1,49 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.test {
+  padding: 100px;
+  &__tabs {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  &__tab {
+    border: 3px solid #000;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 15px;
+    background-color: #ccc;
+    cursor: pointer;
+    &--active {
+      background-color: tomato;
+    }
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+
+  &__content {
+    background-color: #ccc;
+    padding: 15px;
+    font-size: 40px;
+    line-height: 1.5;
+    border: 3px solid #000;
+    display: none;
+    &--active {
+      display: block;
+    }
+  }
+}
