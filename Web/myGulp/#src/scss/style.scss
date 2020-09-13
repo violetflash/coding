@@ -9,6 +9,8 @@
   }
 }
 
+//&display=swap&subset=cyrillic-ext
+
 @import "fonts";
 
 html {
@@ -25,11 +27,3 @@ body{
 
 }
 
-
-
-.image-box {
-  width: 100vw;
-  height: 100vh;
-  background: url("../images/image.jpg") center center no-repeat;
-  background-size: cover;
-}
