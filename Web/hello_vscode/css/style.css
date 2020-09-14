@@ -1,0 +1,23 @@
+header {
+  background-color: #fff;
+}
+
+body {
+  font-size: 20px;
+}
+
+body div {
+  font-size: 10px;
+}
+
+.container__item {
+  background-color: #fff;
+}
+
+.container__box {
+  background-color: #000;
+}
+
+.red {
+  color: red;
+}

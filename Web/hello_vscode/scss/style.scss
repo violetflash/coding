@@ -1,0 +1,22 @@
+@import "_header";
+
+body {
+   font-size: 20px;
+   div {
+      font-size: 10px;
+   }
+}
+
+.container {
+   &__item {
+      background-color: #fff;
+   }
+
+   &__box {
+      background-color: #000;
+   }
+}
+
+.red {
+   color: red;
+}
