@@ -54,6 +54,7 @@
             daMatchMedia[index].addListener(dynamicAdapt);
         }
     }
+
     //Основная функция
     function dynamicAdapt(e) {
         for (let index = 0; index < daElementsArray.length; index++) {
@@ -99,11 +100,13 @@
         const actualIndex = indexOfElements(parentPlace, true)[indexPlace];
         parentPlace.insertBefore(el, parentPlace.children[actualIndex]);
     }
+
     //Функция получения индекса внутри родителя
     function indexInParent(el) {
         var children = Array.prototype.slice.call(el.parentNode.children);
         return children.indexOf(el);
     }
+
     //Функция получения массива индексов элементов внутри родителя
     function indexOfElements(parent, back) {
         const children = parent.children;
@@ -121,15 +124,25 @@
         }
         return childrenArray;
     }
+
     //Сортировка объекта
     function dynamicAdaptSort(arr) {
         arr.sort(function (a, b) {
-            if (a.breakpoint > b.breakpoint) { return -1 } else { return 1 }
+            if (a.breakpoint > b.breakpoint) {
+                return -1
+            } else {
+                return 1
+            }
         });
         arr.sort(function (a, b) {
-            if (a.place > b.place) { return 1 } else { return -1 }
+            if (a.place > b.place) {
+                return 1
+            } else {
+                return -1
+            }
         });
     }
+
     //Дополнительные сценарии адаптации
     function customAdapt() {
         //const viewport_width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
