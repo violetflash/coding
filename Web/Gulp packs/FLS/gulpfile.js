@@ -25,10 +25,10 @@ let path = {
     //для каталога с исходниками
     src: {
         //исключаем файлы с _*.html из сборки
-        html: [source_folder + "/*.html", "!"+source_folder + "/_*.html"],
+        html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
         //конкретный файл, который будет обрабатываться галпом, а не все scss файлы в этой папке
         css: source_folder + "/scss/style.scss",
-        js: source_folder + "/js/script.js",
+        js: source_folder + "/js/app.js",
         //** - слушаем все подпапки в папке images (например, content или icons)
         // и выбираем только файлы с нужными расширениями
         img: source_folder + "/images/**/*.{jpg,png,svg,gif,ico,webp}",
@@ -50,7 +50,7 @@ let path = {
 
 //переменные, которые помогу в написании сценария
 //переменным будет присвоен сам 'gulp'
-let { src, dest } = require('gulp'),
+let {src, dest} = require('gulp'),
     //создадим отдельную переменную gulp, которой тоже присвоим 'gulp' для выполнения иных задач
     gulp = require('gulp'),
     //назначение переменной для плагина browser-sync
@@ -64,13 +64,19 @@ let { src, dest } = require('gulp'),
     rename = require("gulp-rename"),
     uglify = require("gulp-uglify-es").default,
     imagemin = require("gulp-imagemin"),
+    recompress = require("imagemin-jpeg-recompress"), //тоже пережимает, но лучше. Плагин для плагина
+    pngquant = require("imagemin-pngquant"),
     webp = require("gulp-webp"),
     webphtml = require("gulp-webp-html"),
-    webpcss = require("gulp-webpcss"),
     svgSprite = require("gulp-svg-sprite"),
     ttf2woff = require("gulp-ttf2woff"),
     ttf2woff2 = require("gulp-ttf2woff2"),
-    fonter = require("gulp-fonter");
+    fonter = require("gulp-fonter"),
+    size = require("gulp-filesize"),
+    babel = require("gulp-babel"), //переводит js-файлы в формат, понятный даже тупому ослику(IE)ю Если точнее, конвертирует javascript стандарта ES6 в ES5
+    sourcemaps = require("gulp-sourcemaps"); //рисует карту слитого воедино файла, чтобы было понятно, что из какого файла бралось
+
+
 
 
 //Функция, которая будет обновлять страницу
@@ -82,7 +88,7 @@ function browserSync(params) {
             baseDir: "./" + project_folder + "/"
         },
         port: 3000,
-        notify:false,
+        notify: false,
         injectChanges: false
     })
 }
@@ -95,12 +101,14 @@ function html() {
         .pipe(webphtml())
         //pipe - функция, внутри которой мы пишем команды для gulp
         .pipe(dest(path.build.html)) //выгрузка
+        .pipe(size())
         .pipe(browsersync.stream())
 }
 
 //Функция обработки стилей
 function css() {
     return src(path.src.css)
+        .pipe(sourcemaps.init()) //инициализируем sourcemaps, чтобы он начинал записывать, что из какого файла берётся
         .pipe(
             scss({
                 //формирование развернутого (не сжатого) css файла
@@ -114,21 +122,35 @@ function css() {
             })
         )
         .pipe(
-            webpcss({
-                webpClass: '.webp',
-                noWebpClass: '.no-webp'
-            }))
-        .pipe(
             group_media()
         )
         .pipe(dest(path.build.css)) //выгрузка
-        .pipe(clean_css())
+        .pipe(clean_css({
+            compatibility: "ie8",
+            level: {
+                1: {
+                    specialComments: 0,
+                    removeEmpty: true,
+                    removeWhitespace: true,
+                },
+                2: {
+                    mergeMedia: true,
+                    removeEmpty: true,
+                    removeDuplicateFontRules: true,
+                    removeDuplicateMediaBlocks: true,
+                    removeDuplicateRules: true,
+                    removeUnusedAtRules: true,
+                },
+            },
+        }))
         .pipe(
             rename({
                 extname: ".min.css"
             })
         )
+        .pipe(sourcemaps.write()) //записываем карту в итоговый файл
         .pipe(dest(path.build.css))
+        .pipe(size())
         .pipe(browsersync.stream())
 }
 
@@ -137,6 +159,7 @@ function js() {
         //сборка файлов через fileinclude
         .pipe(fileinclude())
         //pipe - функция, внутри которой мы пишем команды для gulp
+        .pipe(babel())
         .pipe(dest(path.build.js)) //выгрузка
         .pipe(
             uglify()
@@ -147,6 +170,7 @@ function js() {
             })
         )
         .pipe(dest(path.build.js))
+        .pipe(size())
         .pipe(browsersync.stream())
 }
 
@@ -160,17 +184,33 @@ function images() {
         .pipe(dest(path.build.img)) //выгрузка
         .pipe(src(path.src.img))  //обращение к исходникам
         .pipe(
-            imagemin({
-                progressive: true,
-                svgoPlugins: [{ removeViewBox: false}],
-                interlaced: true,
-                optimizationLevel: 3 // 0 to 7
-            })
+            imagemin(
+                [
+                    recompress({
+                        //Настройки сжатия изображений. Сейчас всё настроено так, что сжатие почти незаметно для глаза на обычных экранах. Можете покрутить настройки, но за результат не отвечаю.
+                        loops: 4, //количество прогонок изображения
+                        min: 80, //минимальное качество в процентах
+                        max: 100, //максимальное качество в процентах
+                        quality: "high", //тут всё говорит само за себя, если хоть капельку понимаешь английский
+                        use: [pngquant()],
+                    }),
+                    imagemin.gifsicle(), //тут и ниже всякие плагины для обработки разных типов изображений
+                    imagemin.optipng(),
+                    imagemin.svgo(),
+                ],
+                {
+                    progressive: true,
+                    svgoPlugins: [{removeViewBox: false}],
+                    interlaced: true,
+                    optimizationLevel: 3 // 0 to 7
+                }
+            ),
         )
         //сборка файлов через fileinclude
         //pipe - функция, внутри которой мы пишем команды для gulp
         .pipe(dest(path.build.img))
         .pipe(browsersync.stream())
+        .pipe(size());
 }
 
 function fonts(params) {
@@ -229,7 +269,8 @@ function fontsStyle(params) {
     }
 }
 
-function cb() { }
+function cb() {
+}
 
 
 //Функция для отслеживания изменений на лету
