@@ -28,7 +28,7 @@ let path = {
         //исключаем файлы с _*.html из сборки
         html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
         //конкретный файл, который будет обрабатываться галпом, а не все scss файлы в этой папке
-        css: source_folder + "/scss/style.scss",
+        css: source_folder + "/scss/main.scss",
         js: source_folder + "/js/app.js",
         // слушаем все подпапки в папке images например, content или icons
         // и выбираем только файлы с нужными расширениями

@@ -36,6 +36,10 @@
     "jquery": "^3.5.1",
     "normalize.css": "^8.0.1",
     "nouislider": "^14.6.2",
+    "stylelint": "^13.7.2",
+    "stylelint-declaration-block-no-ignored-properties": "^2.3.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.18.0",
     "swiper": "^6.2.0",
     "webp-converter": "^2.2.3"
   },

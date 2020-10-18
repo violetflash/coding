@@ -28,7 +28,7 @@ let path = {
         //исключаем файлы с _*.html из сборки
         html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
         //конкретный файл, который будет обрабатываться галпом, а не все scss файлы в этой папке
-        css: source_folder + "/scss/style.scss",
+        css: source_folder + "/scss/main.scss",
         js: source_folder + "/js/app.js",
         // слушаем все подпапки в папке images например, content или icons
         // и выбираем только файлы с нужными расширениями
@@ -301,22 +301,21 @@ gulp.task('otf2ttf', function () {
         .pipe(dest(source_folder + '/fonts/'));
 })
 
-
-gulp.task('svgSprite', function () {
-    return gulp.src([source_folder + '/iconsprite/*.svg'])
+const svgSprites = () => {
+    return gulp.src([source_folder + '/images/svg/*.svg'])
         .pipe(svgSprite({
             mode: {
                 stack: {
                     //куда будет выводиться готовый собранный файл
-                    sprite: "../icons/sprite.svg", //sprite file name
+                    sprite: "../sprite.svg", //sprite file name
                     //создание html файла с примером иконок
                     example: true
                 }
-            }
+            },
         }))
-        .pipe(dest(path.build.img)) //выгрузка
+        .pipe(dest(path.build.img)); //выгрузка
+}
 
-})
 
 //функция подключения шрифтов к стилям
 function fontsStyle(params) {
@@ -357,7 +356,7 @@ function clean(params) {
     return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel(jsLibs, js, cssLibs, css, html, images, fonts), fontsStyle);
+let build = gulp.series(clean, gulp.parallel(jsLibs, js, cssLibs, css, html, images, svgSprites, fonts), fontsStyle);
 //сценарий выполнения watch
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
@@ -366,6 +365,7 @@ let watch = gulp.parallel(build, watchFiles, browserSync);
 //подружим gulp с новыми переменными, чтобы он их понимал и работал с ними
 
 exports.fontsStyle = fontsStyle;
+exports.svgSprites = svgSprites;
 exports.fonts = fonts;
 exports.images = images;
 exports.js = js;
