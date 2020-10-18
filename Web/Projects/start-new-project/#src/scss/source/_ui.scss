@@ -3,6 +3,11 @@
   content: '₽';
 }
 
+._req::after {
+  content: '*';
+  color: red;
+}
+
 .ibg {
   background-position: center;
   background-size: cover;
