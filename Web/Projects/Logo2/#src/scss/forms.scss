@@ -1,0 +1,100 @@
+//BUTTON ============================================================================
+.btn {
+  display: inline-flex;
+  height: 100%;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 18px;
+  text-transform: uppercase;
+  padding: 11px 21px 10px 25px;
+  background-color: #ec772a;
+  border: none;
+  transition: all 0.3s ease 0s;
+
+  @media (min-width: $md2+px) {
+    &:hover {
+      background-color: #f59049;
+    }
+  }
+  &._fw {
+    width: 100%;
+  }
+}
+
+//<INPUT>  ===============================================================================
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  appearance: none;
+}
+
+input {
+  border-radius: 0 !important;
+  display: block;
+  padding: 0 20px;
+  &._focus {
+  }
+  &._error {
+  }
+}
+
+textarea {
+  resize: none;
+  padding: 0 0;
+}
+//</INPUT>  ===============================================================================
+
+//<CHECKBOX>  ===============================================================================
+.checkbox {
+  position: relative;
+
+  &__input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    &:checked + .checkbox__text::before {
+      background-image: url("../images/icons/check.svg");
+      background-color: #fff;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &__text {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    font-size: 16px;
+    color: #272822;
+    letter-spacing: -0.3px;
+    line-height: 1.2;
+    cursor: pointer;
+    &::before {
+      content: "";
+      align-items: flex-start;
+      margin: 0 14px 0 0;
+      flex: 0 0 20px;
+      left: 0;
+      top: 0;
+      width: 20px;
+      height: 18px;
+      background: #fff;
+      border: 1px solid #a7a9ac;
+    }
+  }
+
+  a {
+    color: #fff;
+    text-decoration: underline;
+    @media (min-width: $md2+px) {
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
