@@ -1,0 +1,39 @@
+@import "source/mixins";
+@import "source/fonts";
+@import "source/vars";
+//<vendors + plugins>==================================================================================================================
+@import "vendors/vendors";
+
+//<Общие параметры>==================================================================================================
+@import "source/settings";
+
+body {
+  margin: 0;
+  color: $mainColor;
+  //background-color: var(--color-white);
+  font-family: $fontFamily;
+  font-size: 14px;
+  height: 100%;
+}
+
+//Оболочка
+.site-container {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+//Главный контейнер
+.container {
+  max-width: $maxWidthContainer + px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>==============================================================================
+@import "source/global";
+@import "header";
+@import "footer";
+
+//===============================================================================
