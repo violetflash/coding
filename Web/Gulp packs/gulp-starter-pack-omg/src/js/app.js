@@ -1,3 +1,5 @@
+/*
+
 // PRE-initialization
 var APP = window.APP || {};
 APP.Dev = APP.Dev || {};
@@ -96,7 +98,7 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
 
     return app;
   };
-
+*/
   // a.k.a. ready
   $(function() {
     APP.Initilizer().init();
@@ -107,4 +109,6 @@ var easingSwing = [0.02, 0.01, 0.47, 1]; // default jQuery easing
       APP.Initilizer().onLoadTrigger();
     });
   });
+  /*
 })(jQuery, window.APP);
+*/
