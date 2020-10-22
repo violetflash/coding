@@ -25,10 +25,14 @@ let path = {
     },
     //для каталога с исходниками
     src: {
+        pagelist: source_folder + "/index.yaml",
         //исключаем файлы с _*.html из сборки
         html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
+        //исключаем файлы с _*.pug из сборки
+        pug: [source_folder + "/pug/*.pug", "!" + source_folder + "/pug/_*.pug"],
         //конкретный файл, который будет обрабатываться галпом, а не все scss файлы в этой папке
         css: source_folder + "/scss/main.scss",
+        //Файл js, в котором будут через @@include подключаться остальные скрипты
         js: source_folder + "/js/app.js",
         // слушаем все подпапки в папке images например, content или icons
         // и выбираем только файлы с нужными расширениями
@@ -40,7 +44,8 @@ let path = {
     watch: {
         //слушаем всё, что является нужным файлом
         html: source_folder + "/**/*.html",
-        css: source_folder + "/scss/**/*.scss",
+        pug: source_folder + "/**/*.pug",
+        css: source_folder + "/cscc/**/*.scss",
         js: source_folder + "/js/**/*.js",
         img: source_folder + "/images/**/*.{jpg,png,svg,gif,ico,webp}",
     },
@@ -49,7 +54,7 @@ let path = {
     clean: "./" + project_folder + "/"
 }
 
-//переменные, которые помогу в написании сценария
+//переменные, которые помогут в написании сценария
 //переменным будет присвоен сам 'gulp'
 let {src, dest} = require('gulp'),
     //создадим отдельную переменную gulp, которой тоже присвоим 'gulp' для выполнения иных задач
@@ -77,7 +82,11 @@ let {src, dest} = require('gulp'),
     size = require("gulp-filesize"),
     babel = require("gulp-babel"), //переводит js-файлы в формат, понятный даже тупому ослику(IE). Если точнее, конвертирует javascript стандарта ES6 в ES5
     sourcemaps = require("gulp-sourcemaps"); //рисует карту слитого воедино файла, чтобы было понятно, что из какого файла бралось
-
+    plumber = require('gulp-plumber')
+    pug = require('gulp-pug')
+    pugLinter = require('gulp-pug-linter')
+    htmlValidator = require('gulp-w3c-html-validator')
+    bemValidator = require('gulp-html-bem-validator')
 
 //Функция, которая будет обновлять страницу
 function browserSync(params) {
@@ -93,15 +102,49 @@ function browserSync(params) {
     })
 }
 
-//функция для работы с html файлами
+const task = () => {
+  delete require.cache[require.resolve(path.src.pagelist)];
+  const pages = require(path.src.pagelist);
+  return src(source_folder + '/index.html')
+    .pipe(
+      consolidate('lodash', {
+        pages: pages,
+      })
+    )
+    .pipe(dest(path.build.html));
+};
+
+const buildIndexPage = () => task();
+const watch = () => () => {
+  gulp.watchIndex(path.src.pagelist, buildIndexPage);
+};
+
+module.exports.build = buildIndexPage;
+module.exports.watchIndex = watchIndex;
+
+
+// function pug2html() {
+//   return src(path.src.pug)
+//     .pipe(plumber())
+//     .pipe(pugLinter({ reporter: 'default' }))
+//     .pipe(pug({ pretty: false }))
+//     .pipe(webphtml())
+//     .pipe(htmlValidator())
+//     .pipe(bemValidator())
+//     .pipe(dest(path.build.html))
+//     .pipe(browsersync.stream())
+// }
+
+// функция для работы с html файлами
 function html() {
     return src(path.src.html)
         //сборка файлов через fileinclude
         .pipe(fileinclude())
+        .pipe(plumber())
         .pipe(webphtml())
-        //pipe - функция, внутри которой мы пишем команды для gulp
+        .pipe(htmlValidator())
+        .pipe(bemValidator())
         .pipe(dest(path.build.html)) //выгрузка
-        .pipe(size())
         .pipe(browsersync.stream())
 }
 
@@ -148,7 +191,6 @@ function cssLibs() {
         )
         .pipe(sourcemaps.write('.'))
         .pipe(dest(path.build.css)) //кидаем готовый файл в директорию
-        .pipe(size());
 }
 
 //Функция обработки стилей
@@ -196,7 +238,6 @@ function css() {
         )
         .pipe(sourcemaps.write('.')) //записываем карту в итоговый файл
         .pipe(dest(path.build.css))
-        .pipe(size())
         .pipe(browsersync.stream())
 }
 
@@ -219,7 +260,6 @@ function jsLibs() {
             })
         )
         .pipe(dest(path.build.js)) //выгрузка сжатого
-        .pipe(size())
         .pipe(browsersync.stream())
 }
 
@@ -241,7 +281,6 @@ function js() {
         )
         .pipe(sourcemaps.write('.'))
         .pipe(dest(path.build.js))
-        .pipe(size())
         .pipe(browsersync.stream())
 }
 
@@ -277,10 +316,7 @@ function images() {
                 }
             ),
         )
-        //сборка файлов через fileinclude
-        //pipe - функция, внутри которой мы пишем команды для gulp
         .pipe(dest(path.build.img))
-        .pipe(size())
         .pipe(browsersync.stream());
 }
 
@@ -301,27 +337,26 @@ gulp.task('otf2ttf', function () {
         .pipe(dest(source_folder + '/fonts/'));
 })
 
-
-gulp.task('svgSprite', function () {
-    return gulp.src([source_folder + '/iconsprite/*.svg'])
+const svgSprites = () => {
+    return gulp.src([source_folder + '/images/svgSprite/*.svg'])
         .pipe(svgSprite({
             mode: {
                 stack: {
                     //куда будет выводиться готовый собранный файл
-                    sprite: "../icons/sprite.svg", //sprite file name
+                    sprite: "../svgSprite.svg", //sprite file name
                     //создание html файла с примером иконок
                     example: true
                 }
-            }
+            },
         }))
-        .pipe(dest(path.build.img)) //выгрузка
+        .pipe(dest(path.build.img)); //выгрузка
+}
 
-})
 
 //функция подключения шрифтов к стилям
 function fontsStyle(params) {
 
-    let file_content = fs.readFileSync(source_folder + '/scss/source/_fonts.scss');
+    let file_content = fs.readFileSync(source_folder + '/scss/base/_fonts.scss');
     if (file_content == '') {
         fs.writeFile(source_folder + '/scss/_fonts.scss', '', cb);
         return fs.readdir(path.build.fonts, function (err, items) {
@@ -331,7 +366,7 @@ function fontsStyle(params) {
                     let fontname = items[i].split('.');
                     fontname = fontname[0];
                     if (c_fontname != fontname) {
-                        fs.appendFile(source_folder + '/scss/source/_fonts.scss', '@include font("' + fontname + '", "' + fontname + '", "400", "normal");\r\n', cb);
+                        fs.appendFile(source_folder + '/scss/base/_fonts.scss', '@include font("' + fontname + '", "' + fontname + '", "400", "normal");\r\n', cb);
                     }
                     c_fontname = fontname;
                 }
@@ -346,6 +381,7 @@ function cb() {
 
 //Функция для отслеживания изменений на лету
 function watchFiles(params) {
+    // gulp.watch([path.watch.pug], pug2html);
     gulp.watch([path.watch.html], html);
     gulp.watch([path.watch.css], css);
     gulp.watch([path.watch.js], js);
@@ -357,15 +393,16 @@ function clean(params) {
     return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel(jsLibs, js, cssLibs, css, html, images, fonts), fontsStyle);
+let build = gulp.series(clean, gulp.parallel(jsLibs, js, cssLibs, css, html, images, svgSprites, fonts), fontsStyle);
 //сценарий выполнения watch
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 // gulp.task("default", gulp.parallel("style", "script"));
 
-
 //подружим gulp с новыми переменными, чтобы он их понимал и работал с ними
+
 exports.fontsStyle = fontsStyle;
+exports.svgSprites = svgSprites;
 exports.fonts = fonts;
 exports.images = images;
 exports.js = js;
@@ -373,6 +410,7 @@ exports.jsLibs = jsLibs;
 exports.css = css;
 exports.cssLibs = cssLibs;
 exports.html = html;
+// exports.pug2html = pug2html;
 exports.build = build;
 exports.watch = watch;
 exports.default = watch;

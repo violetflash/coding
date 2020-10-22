@@ -1,0 +1,30 @@
+// цвета сайта
+:root {
+  --mainColor: #5c5c5c;
+  --mainColor-hover: #2c2c2c;
+  --white: #fff;
+  --grey: #7b7b7b;
+  --accent: #ff8200;
+  --accent-hover: #e47400;
+  --lightGrey: #e0e0e0;
+}
+
+// для спользования режима RGBA
+$mainColor: #2c2c2c;
+$white: #fff;
+$grey: #7b7b7b;
+$accent: #ff8200;
+$accent-hover: #e47400;
+$lightGrey: #e0e0e0;
+
+// <Шрифт по умолчанию>========================
+$fontFamily: "Gilroy", sans-serif;
+
+// <Переменные контейнера>=====================
+$minWidth: 320;
+$maxWidth: 1400;
+$maxWidthContainer: 1170;
+$md1: $maxWidthContainer + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
